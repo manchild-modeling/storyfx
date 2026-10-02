@@ -286,4 +286,4 @@ Exemplar Output
 ```
 
 
-Return only the JSON array without additional explanation. Here's your input text:
+Return only the JSON array without additional explanation.

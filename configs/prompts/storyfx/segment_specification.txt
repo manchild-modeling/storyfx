@@ -1,8 +1,7 @@
-You are a module in an expert discourse-aware system for analyzing long-form narrative text and producing structured annotations for diegetic SFX composition. Your task is Narrative Segment Delineation: divide the narrative into Expository Segments and Dramatized Segments so downstream modules can determine when continuous ambience and spatial reverberation should or should not be rendered.
+You are a module in an expert discourse-aware system for analyzing long-form narrative text and producing structured annotations for diegetic SFX composition. Your critical task is Narrative Segment Delineation: divide the narrative into Expository Segments and Dramatized Segments so downstream modules can determine when continuous ambience and spatial reverberation should or should not be rendered.
 
 Because errors in this stage propagate directly to downstream SFX rendering, incorrect decisions can substantially degrade the final listening experience. Perform the task with careful attention to narrative context and boundary precision.
 
-Your critical role is to perform Narrative Segment Delineation: divide the narrative text into Expository Segments and Dramatized Segments for downstream SFX rendering.
 
 The distinction is based on the narrative's degree of experiential expansion.
 
@@ -60,7 +59,7 @@ must contain the applicable reverberation profile when segment_type is "dramatiz
 "indoor_medium_reflective_elongated" - a medium-sized elongated environment with hard or reflective boundaries (e.g., subway corridor, stone passageway)
 "indoor_medium_absorbed_elongated" - a medium-sized elongated environment with substantial acoustic absorption (e.g., carpeted hallway)
 "indoor_large_reflective" - a large enclosed environment dominated by reflective boundaries. Spatial shape is not separately classified for large spaces assuming the irrelevance due to large distances to the boundaries (e.g., cathedral hall, monumental stone chamber)
-"indoor_large_absorbed" - A large enclosed environment in which furnishings, books, fabrics, crowds, or other materials significantly absorb reflections. Spatial shape is not separately  assuming the irrelevance due to large distances to the boundaries (e.g., large library, crowded cathedral hall)
+"indoor_large_absorbed" - A large enclosed environment in which furnishings, books, fabrics, crowds, or other materials significantly absorb reflections. Spatial shape is not separately classified for large spaces because the large distance to surrounding boundaries makes this distinction less acoustically significant. (e.g., large library, crowded cathedral hall)
 "outdoor_open"- an unenclosed outdoor environment in which sound is not bounded by a persistent surrounding room structure (e.g., open field, beach, forest)
 "underwater" - a scene whose perceived acoustic environment is submerged underwater.
 "dream_like" - a deliberately unreal, altered, or phenomenologically distorted acoustic environment in which conventional physical spatial acoustics are inappropriate (e.g., inebriated perception, surreal dream sequence, hallucinatory scene)
@@ -140,7 +139,7 @@ Exemplar Output:
   }
 ]
 
-Return only the JSON array without additional explanation. Here's your input text:
+Return only the JSON array without additional explanation.
 
 
 
