@@ -107,7 +107,7 @@ Before returning the response, verify separately for every segment that:
 "start" equals the first five words of that segment;
 "end" equals the last five words of that segment.
 
-Exact anchor length will be normalized during downstream processing; semantic boundary accuracy and verbatim correspondence are more important than producing a fixed number of words.
+
 must contain the applicable reverberation profile when segment_type is "dramatized". Allowed Values:
 "indoor_tight_reflective_regular" - a very small enclosed space with predominantly hard or reflective boundaries and no strongly elongated geometry (e.g., inside a coffin)
 "indoor_tight_absorbed_regular" - a very small enclosed space whose boundaries or contents substantially absorb reflections (e.g., inside a full wardrobe)
