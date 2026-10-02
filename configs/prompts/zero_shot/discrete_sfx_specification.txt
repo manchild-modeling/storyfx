@@ -1,0 +1,91 @@
+Your task is **Discrete SFX Specification**: identify temporally localized audible events described or strongly implied by the narrative and convert them into structured specifications for downstream Text-to-Audio generation and SFX rendering.
+
+A **Discrete SFX event** is an audible phenomenon associated with a particular narrative occurrence and exhibiting a bounded temporal evolution. It begins, may develop for a limited period, and eventually terminates or decays.
+
+Discrete SFX must be distinguished from **Ambient SFX**, which represent persistent or recurring environmental conditions rather than individual bounded occurrences. The distinction depends on how the phenomenon functions in context rather than on the sound source alone.
+
+### SFX Eligibility
+
+Evaluate candidate events using the following rules:
+
+1. Include **explicit audible events** when they are temporally bounded.
+
+2. Include **strongly implied audible events** when a concrete physical action has a conventional and directly implied acoustic consequence.
+
+3. Exclude **speculative sonification** where a sound could be added creatively but is neither explicitly described nor strongly implied.
+
+When uncertain, prefer omission over speculative sonification.
+
+Additional rules:
+
+- The event must actually occur within the narrated or phenomenologically experienced situation.
+- Do not generate SFX for negated, merely expected, hypothetical, retrospective, habitual, or generalized occurrences.
+- Do not infer a sound merely because a sound-producing object is mentioned.
+- Interpret figurative and comparative language according to the literal underlying phenomenon.
+  - If the underlying phenomenon is genuinely audible, render the literal source rather than the figurative comparison.
+  - If the underlying phenomenon is inaudible, do not create a sound from the metaphor.
+- Do not convert persistent or recurring environmental conditions into discrete events when they function as ambience.
+- Do not specify intelligible dialogue, narration, or explicitly quoted speech as Discrete SFX. Non-verbal vocalizations and non-lexical vocal textures may remain eligible.
+- If multiple acoustically distinct events occur within the same narrative span, specify them separately when they can be independently rendered.
+
+### Caption
+
+For each eligible event, produce a concise `caption` describing what should actually be heard.
+
+Preserve the essential acoustic identity and perceptually important material or motion characteristics, while excluding character names, motives, visual information, figurative wording, and other narrative details irrelevant to acoustic generation.
+
+### Duration
+
+Assign exactly one semantic duration category:
+
+- `"impulse"` — sharply localized with minimal temporal development;
+- `"brief"` — short but perceptibly developed;
+- `"prolonged"` — bounded but comparatively extended.
+
+Classify the temporal behavior of the narrated event itself, not the amount of text used to describe it.
+
+### Transmission Profile
+
+Assign a `transmission_profile` only when the narrative explicitly or strongly indicates a non-standard way in which the sound reaches or is perceived by the listener.
+
+Allowed values:
+
+- `"muffled"` — attenuated or filtered through an obstruction or enclosure;
+- `"distant"` — produced by a substantially remote source;
+- `"underwater"` — perceived through underwater transmission;
+- `"electronic"` — reproduced or transmitted through an electronic medium such as television or radio;
+- `"dream_like"` — perceived through an explicitly altered, surreal, hallucinatory, or dream-state auditory condition.
+
+Otherwise assign `null`.
+
+Transmission describes how the event is heard, not the reverberation of the surrounding environment.
+
+Do not assign `"distant"` merely because a sound is quiet or masked, and do not assign `"dream_like"` merely because an event is supernatural.
+
+### Output Format
+
+Return a JSON array containing one object for each identified Discrete SFX event:
+
+```json
+{
+  "discrete_sfx_id": "string",
+  "anchor": "exact text fragment from the narrative",
+  "caption": "concise TTA-oriented acoustic caption",
+  "duration": "impulse | brief | prolonged",
+  "transmission_profile": "muffled | distant | underwater | electronic | dream_like | null"
+}
+```
+
+Field requirements:
+
+- `discrete_sfx_id`: assign sequentially in narrative order using `discrete_sfx000`, `discrete_sfx001`, and so on.
+- `anchor`: copy verbatim the text fragment that most directly identifies the event occurrence. Include enough text to reliably distinguish the intended occurrence. Do not paraphrase, normalize, summarize, or rewrite it.
+- `caption`: provide a concise acoustic description suitable for Text-to-Audio generation.
+- `duration`: use exactly `"impulse"`, `"brief"`, or `"prolonged"`.
+- `transmission_profile`: use exactly `"muffled"`, `"distant"`, `"underwater"`, `"electronic"`, `"dream_like"`, or `null`.
+
+The number of events must be determined entirely by the narrative. Do not create an event for every action, object, sentence, or acoustically suggestive word. Include only temporally bounded sounds that are explicitly described or strongly and conventionally implied.
+
+Return only the JSON array without additional explanation.
+
+Here's your input text:

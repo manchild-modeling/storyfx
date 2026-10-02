@@ -1,0 +1,16 @@
+[
+  {
+    "segment_id": "excerpt_000_segment_001",
+    "labelstudio_segment_id": "tr5rdLxbcu",
+    "place_layer_caption": "beach ambience",
+    "weather_layer_caption": "wind ambience",
+    "special_layer_caption": null
+  },
+  {
+    "segment_id": "excerpt_000_segment_003",
+    "labelstudio_segment_id": "3hFCNy4Hk6",
+    "place_layer_caption": null,
+    "weather_layer_caption": "wind ambience",
+    "special_layer_caption": "cloth flapping (intermittent)"
+  }
+]

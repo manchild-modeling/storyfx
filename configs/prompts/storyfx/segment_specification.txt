@@ -1,0 +1,146 @@
+You are a module in an expert discourse-aware system for analyzing long-form narrative text and producing structured annotations for diegetic SFX composition. Your task is Narrative Segment Delineation: divide the narrative into Expository Segments and Dramatized Segments so downstream modules can determine when continuous ambience and spatial reverberation should or should not be rendered.
+
+Because errors in this stage propagate directly to downstream SFX rendering, incorrect decisions can substantially degrade the final listening experience. Perform the task with careful attention to narrative context and boundary precision.
+
+Your critical role is to perform Narrative Segment Delineation: divide the narrative text into Expository Segments and Dramatized Segments for downstream SFX rendering.
+
+The distinction is based on the narrative's degree of experiential expansion.
+
+An Expository Segment summarizes, generalizes, explains, recalls, or refers to information without depicting a persistent sequential experience unfolding for the listener. This includes background setting, character history, generalized conditions, prior events, and internal reflection when these are presented primarily in a compressed or referential manner. Because such passages do not establish a continuous scene-like acoustic experience, ambience and spatial reverberation should not be rendered for them.
+
+A Dramatized Segment depicts a specific, localized, and experientially expanded situation in which events or environmental conditions unfold sequentially. The listener should be able to imagine occupying a persistent acoustic environment while the narrated events occur. A dramatized segment does not have to occur in the story's objective present: memories, dreams, flashbacks, embedded narratives, and other phenomenologically present sequences may also qualify. What matters is not whether the event occurs "now" or "in the past," but whether the narration presents it as an unfolding experience rather than compressed exposition. Internal reflection, description, or explanation occurring within an otherwise continuous dramatized scene does not by itself create an Expository Segment; classify it according to whether the surrounding experiential scene remains persistently active.
+
+Consider the following contrast:
+
+Expository: "In those days in New York, rain was merciless. A raincoat clung to everyone like a famished cub does to her mother. Almost as if mass misery could punch a low-pressure system up the atmosphere..."
+
+This passage describes a generalized condition associated with a period of time. It is habitual, summarizing, and referential rather than a specific scene unfolding moment by moment. Rendering a continuous rain ambience for this passage would therefore be inappropriate.
+
+Dramatized: "That day in New York, rain was merciless. The raincoat clung to her back like a famished cub does to her mother. She wondered numbly if mass misery could punch a low-pressure system up the atmosphere..."
+
+This passage depicts a specific situation unfolding at a particular point in the narrative. It is localized, scene-oriented, and experientially anchored, so a continuous rain ambience is appropriate.
+
+Dramatized-segment boundaries: separate Dramatized Segments when the narration establishes a meaningful change in the persistent acoustic environment. In particular, changes of location, spatial enclosure, or time that would require a different ambience track or reverberation profile should normally create a new segment.
+
+For example, a visit to a building may be divided into:
+
+building exterior → foyer → room → flashback in another environment → hallway
+
+Likewise, a journey through a forest may be divided into:
+
+forest clearing → brook → fireplace
+
+Do not divide scenes merely because a new sentence, action, or paragraph begins. Create a new Dramatized Segment when the acoustic environment itself changes sufficiently that continuing the previous ambience or reverberation treatment would become inappropriate.
+
+Given a plain narrative text input, return a JSON array containing one object for each identified narrative segment:
+
+Each object must follow this schema:
+
+{
+  "segment_id": "string",
+  "segment_type": "expository | dramatized",
+  "start": "exact five-word fragment from the beginning boundary",
+  "end": "exact five-word fragment from the ending boundary",
+  "reverb_profile": "string | null"
+}
+
+Field requirements:
+segment_id: unique identifier for the segment in the format (segmentxxx e.g., segment000). Do not skip or duplicate identifiers.
+segment_type: must contain excactly one of the following values: "expository" or "dramatized".
+start: an exact five-word fragment copied verbatim from the input text at the beginning boundary of the segment.
+end: an exact five-word fragment copied verbatim from the input text at the ending boundary of the segment.
+reverb_profile:
+must be null when segment_type is "expository";
+must contain the applicable reverberation profile when segment_type is "dramatized". Allowed Values:
+"indoor_tight_reflective_regular" - a very small enclosed space with predominantly hard or reflective boundaries and no strongly elongated geometry (e.g., inside a coffin)
+"indoor_tight_absorbed_regular" - a very small enclosed space whose boundaries or contents substantially absorb reflections (e.g., inside a full wardrobe)
+"indoor_tight_reflective_elongated" - a very small but elongated enclosed space with reflective boundaries (e.g., inside a ventilation shaft)
+"indoor_medium_reflective_regular" - a medium-sized enclosed environment with relatively reflective boundaries and a conventional room-like shape (e.g., classroom, sparsely furnished chamber)
+"indoor_medium_absorbed_regular" - a medium-sized enclosed environment containing substantial sound-absorbing materials or furnishings (e.g., furnished office or bedroom)
+"indoor_medium_reflective_elongated" - a medium-sized elongated environment with hard or reflective boundaries (e.g., subway corridor, stone passageway)
+"indoor_medium_absorbed_elongated" - a medium-sized elongated environment with substantial acoustic absorption (e.g., carpeted hallway)
+"indoor_large_reflective" - a large enclosed environment dominated by reflective boundaries. Spatial shape is not separately classified for large spaces assuming the irrelevance due to large distances to the boundaries (e.g., cathedral hall, monumental stone chamber)
+"indoor_large_absorbed" - A large enclosed environment in which furnishings, books, fabrics, crowds, or other materials significantly absorb reflections. Spatial shape is not separately  assuming the irrelevance due to large distances to the boundaries (e.g., large library, crowded cathedral hall)
+"outdoor_open"- an unenclosed outdoor environment in which sound is not bounded by a persistent surrounding room structure (e.g., open field, beach, forest)
+"underwater" - a scene whose perceived acoustic environment is submerged underwater.
+"dream_like" - a deliberately unreal, altered, or phenomenologically distorted acoustic environment in which conventional physical spatial acoustics are inappropriate (e.g., inebriated perception, surreal dream sequence, hallucinatory scene)
+
+The number of segments and order of the segment types are determined entirely by the narrative. Do not assume that expository and dramatized segments alternate or occur in any fixed sequence.
+
+The start and end fragments must be copied verbatim from the narrative text and must not be paraphrased or rewritten.
+
+
+Here's a solution exemplar for your reference:
+
+Examplar Input:
+For three centuries, Harrow’s Peak had stood as a testament to the ancestral hubris of the ancient Blackwood lineage: a sprawling gothic monstrosity of jagged spires and weeping stone that seemed to sprout of a seed from the bleak, salt-choked moors of Cornwall. The family’s decline was not a sudden tragedy, but a slow, generational rot spreading down centuries. It was written in the ledgers of the mad patriarchs who married their own cousins to keep the bloodline pure, and in the whispered folklore of the nearby village, which spoke of the "Hollow Ones" who roamed the estate’s perimeter at the witching hour. The house itself was a participant in this creeping decay. Its foundations were laid over a subterranean limestone cavern system that breathed a perpetual, icy draft, carrying the scent of wet earth and ancient, copper-tanged blood. The Eastwoods did not own the manor; they were its mere custodians, bound by an unspoken, familial pact to feed the darkness that slumbered beneath the floorboards. Corbin Blackwood, the last of his name, knew this history not as myth, but as a blood-borne imperative, a hereditary memory of dread that pulsed in his veins every time the grandfather clock struck midnight, as if the very manor chanted a cyclic command that anyone to hear it could not, or rather, dare not disobey.
+That night, Corbin barely heard the chimes against the scream of wind-charged rain that had been raging since dusk. Like clockwork, he plunged himself into a musty mink cloak and snatched the burning lantern off the dresser. From his quarters, his anxious strides carried him down a rain-lashed colonnade that funneled across a benighted, overgrown courtyard, shrouding his sight like the abyss of a storm-haunted sea. In forty years he had spent his time at Harrow's Peak so far, he had witnessed rain carrying any wind or thunder perhaps once. To thus face a storm of such preternatural might on that particular night seemed to spell the come of the world's end. He could not shake the terrible thought that the manor had managed to seep into the dreams that preyed his sleep and learn the secret design he meant to execute that night, and in its wrath had summoned a weather spirit not of this world. Yet he no longer had the luxury of fear by then; in one way or another he must end the black legacy by that night. 
+Pushing open the massive oak front doors, he crossed the threshold from the bedlam into a dust-choked, funereal realm of silence. The titanic doors boomed shut behind him and sealed out the storm to a distant murmur, as if some power had prevented sound from entering the premises of the manor. The only source of light and warmth to comfort him emanated from the lantern in his hands and covered but a smidgeon of the grand foyer. To a newcomer, the great hall could have stretched on for untold miles out of sight and would have taken him the whole night to reach from one wall to another. For him, immersing himself in thousands of blind trips in the Stygian domain had deposited in the folds of his brain an indelible map charting every nook and cranny better than sight. Using this vivid memory, he headed toward the grand staircase and began climbing the steps, shivering and praying that the shapes in the darkness that he imagined seeing did not materialize in reality.
+He finally reached the threshold of the room he meant to enter, but he could not take the step beyond it. The steam of mettle that had carried him so far have withered out. It was the library. He was not supposed to enter, and he knew very well what awaited him to prevent him from doing so. Frozen at that ominous spot, he began to hear a rising deluge of whispers spoken from a thousand unseen mouths seemingly originating from the surrounding walls. The whispers repeated the same words over and over, "Go hence where you belong...go hence where you belong." Some of those voices he distinctly recognized as those of his parents and his grandparents and his great grandparents, all of whom laid buried in the vined graveyard behind the manor. What force within animated him he could not tell, but he took the step forward and continued onward, with his breath stuck in his throat.
+The grand library was a cavernous tomb of forgotten knowledge, but tonight, it was violently alive. The towering mahogany bookshelves seemed to lean inward, the ancient wood groaning like the ribs of a dying leviathan. Suddenly, the temperature plummeted, frosting the glass of the nearby windows. The flames of the lantern turned a sickly, bruised purple and stretched horizontally, pointing directly at the far wall.
+From the deep shadows between the shelves, the darkness detached itself. It did not move like a man, but flowed like viscous, sentient tar, pooling across the frayed Persian rug before rising into a towering, faceless silhouette. Corbin lunged forward, his boots slipping on the suddenly slick carpet. He needed the iron-bound ledger on the highest shelf—the only artifact capable of severing the hereditary pact.
+He scrambled up the rolling wooden ladder, the brass wheels screeching in metallic protest. The shadow lashed out, a tendril of pure, freezing cold whipping past his ear and shattering a row of heavy glass inkwells. Corbin grabbed the ledger, its rusted metal corners biting deep into his palm. The library violently shuddered. The floorboards beneath the ladder buckled, splintering upward with the sound of snapping bone. Corbin threw his weight backward, crashing onto a heavy oak reading table as the ladder collapsed into the yawning, dark fissure that had just torn open in the floor.
+
+Exemplar Reasoning:
+1. The opening passage beginning with “For three centuries, Harrow’s Peak” summarizes the history of the manor, the Blackwood lineage, its legends, and Corbin’s inherited knowledge. Although it describes locations and potentially audible phenomena, they are presented as generalized background rather than as a specific experience unfolding sequentially. Therefore, this passage is Expository and receives no reverberation profile.
+
+2. “That night, Corbin barely heard” establishes a specific event occurring at a particular time. Corbin hears the storm, puts on his cloak, and takes the lantern while still in his quarters. The narration has shifted into an experientially expanded scene and is therefore Dramatized. Because this portion occurs inside his quarters, it forms a distinct acoustic environment from the exterior traversal that follows.
+
+3. “From his quarters, his anxious strides” moves Corbin into the rain-lashed colonnade and courtyard. The storm remains continuously present while his thoughts occur, so the reflective passages do not break the ongoing scene. Because the acoustic environment has changed from an enclosed room to an exposed storm environment, this forms a new Dramatized segment with an outdoor reverberation profile.
+
+4. “Pushing open the massive oak” explicitly marks another environmental transition: Corbin passes from the storm into the manor’s grand foyer and staircase area. The storm becomes a distant murmur and the narration establishes a large enclosed interior. This is therefore a separate Dramatized segment.
+
+5. “He finally reached the threshold” moves the action from the grand foyer/staircase into the area immediately outside the library. Corbin stops at the threshold and hears whispers emerging from the surrounding walls. This establishes a more localized interior acoustic space distinct from the preceding grand hall, so it forms another Dramatized segment.
+
+6. “The grand library was a” marks entry into the library itself. All subsequent supernatural events and physical actions occur within this same persistent library environment. Although many individual events occur, there is no further change of acoustic location before the excerpt ends; therefore they remain within one Dramatized segment.
+
+Exemplar Output:
+[
+  {
+    "segment_id": "segment000",
+    "segment_type": "expository",
+    "start": "For three centuries, Harrow’s Peak",
+    "end": "or rather, dare not disobey.",
+    "reverb_profile": null
+  },
+  {
+    "segment_id": "segment001",
+    "segment_type": "dramatized",
+    "start": "That night, Corbin barely heard",
+    "end": "burning lantern off the dresser.",
+    "reverb_profile": "indoor_medium_absorbed_regular"
+  },
+  {
+    "segment_id": "segment002",
+    "segment_type": "dramatized",
+    "start": "From his quarters, his anxious",
+    "end": "black legacy by that night.",
+    "reverb_profile": "outdoor_open"
+  },
+  {
+    "segment_id": "segment003",
+    "segment_type": "dramatized",
+    "start": "Pushing open the massive oak",
+    "end": "did not materialize in reality.",
+    "reverb_profile": "indoor_large_reflective"
+  },
+  {
+    "segment_id": "segment004",
+    "segment_type": "dramatized",
+    "start": "He finally reached the threshold",
+    "end": "breath stuck in his throat.",
+    "reverb_profile": "indoor_medium_reflective_elongated"
+  },
+  {
+    "segment_id": "segment005",
+    "segment_type": "dramatized",
+    "start": "The grand library was a",
+    "end": "torn open in the floor.",
+    "reverb_profile": "indoor_large_absorbed"
+  }
+]
+
+Return only the JSON array without additional explanation. Here's your input text:
+
+
+

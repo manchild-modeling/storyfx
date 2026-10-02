@@ -1,0 +1,34 @@
+[
+  {
+    "scene_id": "E46tUcDStm",
+    "scene_type": "telling",
+    "start_word_offset": 0.93,
+    "end_word_offset": 25.790001,
+    "reverb_profile": null,
+    "location_summary": "Character background"
+  },
+  {
+    "scene_id": "tr5rdLxbcu",
+    "scene_type": "showing",
+    "start_word_offset": 30.648701,
+    "end_word_offset": 129.915894,
+    "reverb_profile": "outdoor_open",
+    "location_summary": "Buchanan waterfront estate exterior; tides and wind"
+  },
+  {
+    "scene_id": "CARw-j7Pd-",
+    "scene_type": "showing",
+    "start_word_offset": 133.335907,
+    "end_word_offset": 134.955902,
+    "reverb_profile": "indoor_medium_reflective_elongated",
+    "location_summary": "Buchanan mansion hallway"
+  },
+  {
+    "scene_id": "3hFCNy4Hk6",
+    "scene_type": "showing",
+    "start_word_offset": 135.635895,
+    "end_word_offset": 136.055893,
+    "reverb_profile": "indoor_medium_absorbed_regular",
+    "location_summary": "Buchanan drawing room; wind blowing"
+  }
+]

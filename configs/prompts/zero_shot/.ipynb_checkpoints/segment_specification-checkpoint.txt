@@ -1,0 +1,68 @@
+Your task is to perform Narrative Segment Delineation, which involves analyzing the narrative text and dividing it into portions of Expository Segments and Dramatized Segments for downstream SFX rendering.
+
+An Expository Segment summarizes, generalizes, explains, recalls, or refers to information without depicting a persistent sequential experience unfolding in the narrative. This may include background setting, character history, generalized conditions, prior events, or internal reflection when they are presented in a compressed or referential manner. Because such passages do not establish a persistent scenic acoustic experience, ambience SFX and reverberation profiles are not rendered for Expository Segments.
+
+A Dramatized Segment depicts a specific, localized, and experientially expanded situation in which events or environmental conditions unfold sequentially. The narration establishes a persistent scene in which the listener can imagine occupying an acoustic environment while story events occur. A Dramatized Segment does not have to occur in the objective present of the narrative; memories, flashbacks, dreams, embedded narratives, or other phenomenologically present sequences may also qualify. The distinction depends on the experiential expansion of the narration rather than whether the events occur in the present or past.
+
+Internal reflection, description, or explanation occurring within an otherwise continuous Dramatized Segment does not by itself create an Expository Segment if the surrounding experiential scene remains persistently active.
+
+As for discriminating boundaries between Dramatized Segments, a meaningful change in the persistent acoustic environment should create a new Dramatized Segment. Changes of location, spatial enclosure, or time that would require a different ambience track or reverberation profile should normally be treated as separate segments. Do not create a new segment merely because a new sentence, paragraph, action, dialogue exchange, or internal reflection occurs. Create a new Dramatized Segment when continuing the previous ambience or reverberation treatment would become acoustically inappropriate.
+
+Given a plain narrative text input, return a JSON array containing one object for each identified narrative segment.
+
+Each object must follow this schema:
+
+```json
+{
+  "segment_id": "string",
+  "segment_type": "expository | dramatized",
+  "start": "exact five-word fragment from the beginning boundary",
+  "end": "exact five-word fragment from the ending boundary",
+  "reverb_profile": "string | null"
+}
+```
+
+Field requirements:
+
+`segment_id`: unique identifier for the segment in the format `segmentxxx`, for example `segment000`, `segment001`, and `segment002`. Assign identifiers sequentially according to the order of the segments in the narrative. Do not skip or duplicate identifiers.
+
+`segment_type`: must contain exactly one of the following values: `"expository"` or `"dramatized"`.
+
+`start`: an exact five-word fragment copied verbatim from the input text beginning at the first word of the segment.
+
+`end`: an exact five-word fragment copied verbatim from the input text ending at the final word of the segment.
+
+`reverb_profile`:
+
+- must be `null` when `segment_type` is `"expository"`;
+- when `segment_type` is `"dramatized"`, it must contain exactly one of the following allowed reverberation profiles:
+
+`"indoor_tight_reflective_regular"` — a very small enclosed space with predominantly hard or reflective boundaries and no strongly elongated geometry, such as the inside of a coffin.
+
+`"indoor_tight_absorbed_regular"` — a very small enclosed space whose boundaries or contents substantially absorb reflections, such as a full wardrobe.
+
+`"indoor_tight_reflective_elongated"` — a very small but elongated enclosed space with reflective boundaries, such as a ventilation shaft.
+
+`"indoor_medium_reflective_regular"` — a medium-sized enclosed environment with relatively reflective boundaries and a conventional room-like shape, such as a classroom or sparsely furnished chamber.
+
+`"indoor_medium_absorbed_regular"` — a medium-sized enclosed environment containing substantial sound-absorbing materials or furnishings, such as a furnished office or bedroom.
+
+`"indoor_medium_reflective_elongated"` — a medium-sized elongated environment with hard or reflective boundaries, such as a subway corridor or stone passageway.
+
+`"indoor_medium_absorbed_elongated"` — a medium-sized elongated environment with substantial acoustic absorption, such as a carpeted hallway.
+
+`"indoor_large_reflective"` — a large enclosed environment dominated by reflective boundaries. Spatial shape is not separately classified for large spaces because of the relatively large distances to the surrounding boundaries. Examples include a cathedral hall or monumental stone chamber.
+
+`"indoor_large_absorbed"` — a large enclosed environment in which furnishings, books, fabrics, crowds, or other materials substantially absorb reflections. Spatial shape is not separately classified for large spaces because of the relatively large distances to the surrounding boundaries. Examples include a large library or heavily furnished great hall.
+
+`"outdoor_open"` — an unenclosed outdoor environment in which sound is not bounded by a persistent surrounding room structure, such as an open field, beach, or forest clearing.
+
+`"underwater"` — a scene whose perceived acoustic environment is submerged underwater.
+
+`"dream_like"` — a deliberately unreal, altered, or phenomenologically distorted acoustic environment in which conventional physical spatial acoustics are inappropriate, such as an inebriated perception, surreal dream sequence, or hallucinatory scene.
+
+The number of segments and the order of segment types are determined entirely by the narrative. Do not assume that Expository and Dramatized Segments alternate or occur in any fixed sequence.
+
+The `start` and `end` fragments must be copied verbatim from the narrative text and must not be paraphrased, summarized, normalized, or rewritten.
+
+Return only the JSON array without additional explanation. Here's your input text:

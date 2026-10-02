@@ -1,0 +1,86 @@
+[
+  {
+    "discrete_sfx_id": "excerpt_000_discrete_sfx_000",
+    "labelstudio_id": "41xQ1vg_kN",
+    "anchor_time_span": [
+      34.01,
+      35.4
+    ],
+    "segment_id": "excerpt_000_segment_001",
+    "caption": "car starting",
+    "duration_category": "brief",
+    "transmission_profile": "normal"
+  },
+  {
+    "discrete_sfx_id": "excerpt_000_discrete_sfx_001",
+    "labelstudio_id": "bB-w3_5kN1",
+    "anchor_time_span": [
+      120.06,
+      123.07
+    ],
+    "segment_id": "excerpt_000_segment_001",
+    "caption": "water splashing against boat ",
+    "duration_category": "brief",
+    "transmission_profile": "distant"
+  },
+  {
+    "discrete_sfx_id": "excerpt_000_discrete_sfx_002",
+    "labelstudio_id": "1xmM0iEkPm",
+    "anchor_time_span": [
+      133.63,
+      134.96
+    ],
+    "segment_id": "excerpt_000_segment_002",
+    "caption": "footsteps",
+    "duration_category": "brief",
+    "transmission_profile": "normal"
+  },
+  {
+    "discrete_sfx_id": "excerpt_000_discrete_sfx_003",
+    "labelstudio_id": "Bba25kDXzZ",
+    "anchor_time_span": [
+      149.76,
+      151.31
+    ],
+    "segment_id": "excerpt_000_segment_003",
+    "caption": "wind blowing",
+    "duration_category": "brief",
+    "transmission_profile": "normal"
+  },
+  {
+    "discrete_sfx_id": "excerpt_000_discrete_sfx_004",
+    "labelstudio_id": "lFfA5ulOYW",
+    "anchor_time_span": [
+      151.97,
+      156.25
+    ],
+    "segment_id": "excerpt_000_segment_003",
+    "caption": "cloth flapping",
+    "duration_category": "prolonged",
+    "transmission_profile": "normal"
+  },
+  {
+    "discrete_sfx_id": "excerpt_000_discrete_sfx_005",
+    "labelstudio_id": "sNgVI2Dpnw",
+    "anchor_time_span": [
+      176.93,
+      178.91
+    ],
+    "segment_id": "excerpt_000_segment_003",
+    "caption": "cloth flapping",
+    "duration_category": "prolonged",
+    "transmission_profile": "normal"
+  },
+  {
+    "discrete_sfx_id": "excerpt_000_discrete_sfx_006",
+    "labelstudio_id": "_KT1CkLH_2",
+    "anchor_time_span": [
+      192.18,
+      195.78
+    ],
+    "segment_id": "excerpt_000_segment_003",
+    "caption": "door slam",
+    "duration_category": "impulse",
+    "transmission_profile": "normal"
+  }
+]

@@ -1,0 +1,91 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 205.0297052154195 
+tiers? <exists> 
+size = 1 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "utterance_segments" 
+        xmin = 0 
+        xmax = 205.0297052154195 
+        intervals: size = 7 
+        intervals [1]:
+            xmin = 0 
+            xmax = 29.688737982993985 
+            text = "Why they came East I don’t know. They had spent a year in France for
+no particular reason, and then drifted here and there unrestfully
+wherever people played polo and were rich together. This was a
+permanent move, said Daisy over the telephone, but I didn’t believe
+it—I had no sight into Daisy’s heart, but I felt that Tom would drift
+on forever seeking, a little wistfully, for the dramatic turbulence of
+some irrecoverable football game.
+" 
+        intervals [2]:
+            xmin = 29.688737982993985 
+            xmax = 59.19967721687753 
+            text = "And so it happened that on a warm windy evening I drove over to East
+Egg to see two old friends whom I scarcely knew at all. Their house
+was even more elaborate than I expected, a cheerful red-and-white
+Georgian Colonial mansion, overlooking the bay. The lawn started at
+the beach and ran towards the front door for a quarter of a mile,
+jumping over sundials and brick walks and burning gardens" 
+        intervals [3]:
+            xmin = 59.19967721687753 
+            xmax = 89.01951402020553 
+            text = "—finally when
+it reached the house drifting up the side in bright vines as though
+from the momentum of its run. The front was broken by a line of French
+windows, glowing now with reflected gold and wide open to the warm
+windy afternoon, and Tom Buchanan in riding clothes was standing with
+his legs apart on the front porch.
+His speaking voice, a gruff husky tenor, added to the impression of
+fractiousness he conveyed." 
+        intervals [4]:
+            xmin = 89.01951402020553 
+            xmax = 119.65593114092982 
+            text = "There was a touch of paternal contempt in
+it, even toward people he liked—and there were men at New Haven who
+had hated his guts.
+We talked for a few minutes on the sunny porch.
+“I’ve got a nice place here,” he said, his eyes flashing about
+restlessly.
+Turning me around by one arm, he moved a broad flat hand along the
+front vista, including in its sweep a sunken Italian garden, a half
+acre of deep, pungent roses," 
+        intervals [5]:
+            xmin = 119.65593114092982 
+            xmax = 149.10849307990227 
+            text = " and a snub-nosed motorboat that bumped
+the tide offshore.
+
+“It belonged to Demaine, the oil man.” He turned me around again,
+politely and abruptly. “We’ll go inside.”
+We walked through a high hallway into a bright rosy-coloured space,
+fragilely bound into the house by French windows at either end. The
+windows were ajar and gleaming white against the fresh grass outside
+that seemed to grow a little way into the house." 
+        intervals [6]:
+            xmin = 149.10849307990227 
+            xmax = 179.17753978111492 
+            text = "A breeze blew through
+the room, blew curtains in at one end and out the other like pale
+flags, twisting them up toward the frosted wedding-cake of the
+ceiling, and then rippled over the wine-coloured rug, making a shadow
+on it as wind does on the sea.
+The only completely stationary object in the room was an enormous
+couch on which two young women were buoyed up as though upon an
+anchored balloon. They were both in white, and their dresses were
+rippling and fluttering" 
+        intervals [7]:
+            xmin = 179.17753978111492 
+            xmax = 205.0297052154195 
+            text = " as if they had just been blown back in after a
+short flight around the house. I must have stood for a few moments
+listening to the whip and snap of the curtains and the groan of a
+picture on the wall. Then there was a boom as Tom Buchanan shut the
+rear windows and the caught wind died out about the room, and the
+curtains and the rugs and the two young women ballooned slowly to the
+floor." 
