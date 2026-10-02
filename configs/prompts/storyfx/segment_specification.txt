@@ -38,18 +38,26 @@ Each object must follow this schema:
 {
   "segment_id": "string",
   "segment_type": "expository | dramatized",
-  "start": "exactly five whitespace-separated words copied verbatim from the segment beginning",
-  "end": "exactly five whitespace-separated words copied verbatim from the segment end",
+  "start": "short exact phrase copied verbatim from the segment beginning",
+  "end": "short exact phrase copied verbatim from the segment end",
   "reverb_profile": "string | null"
 }
 
 Field requirements:
-segment_id: unique identifier for the segment in the format (segmentxxx e.g., segment000). Do not skip or duplicate identifiers.
-segment_type: must contain excactly one of the following values: "expository" or "dramatized".
-start: an exact five-word fragment copied verbatim from the input text at the beginning boundary of the segment.
-end: an exact five-word fragment copied verbatim from the input text at the ending boundary of the segment.
-reverb_profile:
-must be null when segment_type is "expository";
+
+segment_id: unique identifier for the segment in the format segment_xxx (e.g., segment_000). Do not skip or duplicate identifiers.
+segment_type: must contain exactly one of the following values: "expository" or "dramatized".
+start: a short phrase copied verbatim from the narrative at the beginning boundary of the segment.
+end: a short phrase copied verbatim from the narrative at the ending boundary of the segment.
+
+For both "start" and "end":
+Copy the wording exactly from the narrative.
+Do not paraphrase, rewrite, normalize, or omit words within the selected phrase.
+Prefer approximately 5–10 words.
+Select enough words to identify the intended occurrence unambiguously within the narrative.
+The phrase must include the actual segment boundary.
+
+Exact anchor length will be normalized during downstream processing; semantic boundary accuracy and verbatim correspondence are more important than producing a fixed number of words.
 must contain the applicable reverberation profile when segment_type is "dramatized". Allowed Values:
 "indoor_tight_reflective_regular" - a very small enclosed space with predominantly hard or reflective boundaries and no strongly elongated geometry (e.g., inside a coffin)
 "indoor_tight_absorbed_regular" - a very small enclosed space whose boundaries or contents substantially absorb reflections (e.g., inside a full wardrobe)
@@ -153,7 +161,6 @@ For every segment object:
 - Do not omit any field.
 - Do not add any additional field.
 - Separate all fields with commas according to valid JSON syntax.
-- Count words by splitting on spaces for the start and end values; Punctuation attached to a word does not create an additional word.
 - Use double quotes for all JSON strings.
 - Use the JSON literal null, not the string "null".
 - "reverb_profile" must always be present:
@@ -167,7 +174,7 @@ Before returning the response, internally verify that:
 3. every segment_type is either "expository" or "dramatized";
 4. every dramatized segment has a valid reverb_profile;
 5. every expository segment has reverb_profile set to null.
-6. every start and end value contains exactly five whitespace-separated words
+6. every "start" and "end" value is copied verbatim from the narrative and correctly identifies the intended segment boundary.
 
 Return only the JSON array. Do not include reasoning, comments, Markdown fences, or explanatory text.
 
