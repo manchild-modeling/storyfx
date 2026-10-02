@@ -1,0 +1,10 @@
+cd /workspace
+git clone https://github.com/SonyResearch/Woosh.git
+cd Woosh
+pip install uv
+uv sync --extra cuda
+apt update
+apt install -y gh unzip
+gh release download v1.0.0
+unzip '*.zip'
+uv run test_Woosh-Flow.py
