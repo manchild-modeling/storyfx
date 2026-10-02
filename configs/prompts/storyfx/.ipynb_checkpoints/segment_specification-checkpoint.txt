@@ -29,10 +29,24 @@ Likewise, a journey through a forest may be divided into:
 
 forest clearing → brook → fireplace
 
-Do not divide scenes merely because a new sentence, action, or paragraph begins. Create a new Dramatized Segment when the acoustic environment itself changes sufficiently that continuing the previous ambience or reverberation treatment would become inappropriate.
+A Dramatized Segment should remain continuous for as long as the same persistent acoustic environment remains active.
+
+Changes in narrative focus do not by themselves create new segments. In particular, do NOT create a new segment merely because:
+
+- a new paragraph begins;
+- a different character becomes the focus;
+- dialogue begins or ends;
+- the narration shifts between action, description, observation, and internal thought;
+- a new object or person is described;
+- a discrete sound event occurs.
+
+The important thing is that if these changes occur while the characters remain within the same persistent acoustic environment, retain them within the same Dramatized Segment.
+
+Before creating a new Dramatized Segment, ask:
+"Would the persistent ambience or spatial reverberation need to change at this exact boundary?"
+If the answer is no, do not create a new segment.
 
 Given a plain narrative text input, return a JSON array containing one object for each identified narrative segment:
-
 Each object must follow this schema:
 
 {
@@ -50,12 +64,16 @@ segment_type: must contain exactly one of the following values: "expository" or 
 start: a short phrase copied verbatim from the narrative at the beginning boundary of the segment.
 end: a short phrase copied verbatim from the narrative at the ending boundary of the segment.
 
-For both "start" and "end":
-Copy the wording exactly from the narrative.
-Do not paraphrase, rewrite, normalize, or omit words within the selected phrase.
-Prefer approximately 5–10 words.
-Select enough words to identify the intended occurrence unambiguously within the narrative.
-The phrase must include the actual segment boundary.
+For the "start" and "end" values, return a verbatim boundary anchor used only for downstream text matching.
+The anchor is not a summary, quotation, sentence fragment, or semantically complete phrase. Do not shorten an anchor merely because the segment boundary occurs at the end of a grammatically or semantically complete expression.
+Anchor construction:
+-Copy a contiguous span of exactly 5 whitespace-separated words verbatim from the narrative.
+-Prefer at least 5 words whenever enough surrounding narrative text is available.
+-For "start", the anchor must begin at the exact first word of the segment and continue forward into the segment until a sufficiently long matching span has been obtained.
+-For "end", the anchor must end at the exact final word of the segment and extend backward within the segment until a sufficiently long matching span has been obtained.
+-Do not stop early because a sentence, quotation, clause, or other semantically complete unit ends.
+-Do not paraphrase, normalize, reorder, or omit words within the selected span.
+-Select enough surrounding words to make the anchor reliably identifiable within the narrative.
 
 Exact anchor length will be normalized during downstream processing; semantic boundary accuracy and verbatim correspondence are more important than producing a fixed number of words.
 must contain the applicable reverberation profile when segment_type is "dramatized". Allowed Values:
@@ -174,7 +192,7 @@ Before returning the response, internally verify that:
 3. every segment_type is either "expository" or "dramatized";
 4. every dramatized segment has a valid reverb_profile;
 5. every expository segment has reverb_profile set to null.
-6. every "start" and "end" value is copied verbatim from the narrative and correctly identifies the intended segment boundary.
+6. every "start" and "end" value is copied verbatim from the narrative and correctly identifies the intended segment boundary and exactly composed of 5 white space-separated words.
 
 Return only the JSON array. Do not include reasoning, comments, Markdown fences, or explanatory text.
 
