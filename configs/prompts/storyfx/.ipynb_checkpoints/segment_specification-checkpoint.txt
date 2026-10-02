@@ -96,42 +96,42 @@ Exemplar Reasoning:
 Exemplar Output:
 [
   {
-    "segment_id": "segment000",
+    "segment_id": "segment_000",
     "segment_type": "expository",
     "start": "For three centuries, Harrow’s Peak",
     "end": "or rather, dare not disobey.",
     "reverb_profile": null
   },
   {
-    "segment_id": "segment001",
+    "segment_id": "segment_001",
     "segment_type": "dramatized",
     "start": "That night, Corbin barely heard",
     "end": "burning lantern off the dresser.",
     "reverb_profile": "indoor_medium_absorbed_regular"
   },
   {
-    "segment_id": "segment002",
+    "segment_id": "segment_002",
     "segment_type": "dramatized",
     "start": "From his quarters, his anxious",
     "end": "black legacy by that night.",
     "reverb_profile": "outdoor_open"
   },
   {
-    "segment_id": "segment003",
+    "segment_id": "segment_003",
     "segment_type": "dramatized",
     "start": "Pushing open the massive oak",
     "end": "did not materialize in reality.",
     "reverb_profile": "indoor_large_reflective"
   },
   {
-    "segment_id": "segment004",
+    "segment_id": "segment_004",
     "segment_type": "dramatized",
     "start": "He finally reached the threshold",
     "end": "breath stuck in his throat.",
     "reverb_profile": "indoor_medium_reflective_elongated"
   },
   {
-    "segment_id": "segment005",
+    "segment_id": "segment_005",
     "segment_type": "dramatized",
     "start": "The grand library was a",
     "end": "torn open in the floor.",
@@ -139,7 +139,35 @@ Exemplar Output:
   }
 ]
 
-Return only the JSON array without additional explanation.
+The exemplar demonstrates both the segmentation logic and the required output structure. The structure of your response must match the exemplar exactly: a JSON array of objects containing all five required fields.
+
+The response must be valid JSON and must parse successfully with a standard JSON parser.
+
+For every segment object:
+- Include exactly these five fields:
+  "segment_id"
+  "segment_type"
+  "start"
+  "end"
+  "reverb_profile"
+- Do not omit any field.
+- Do not add any additional field.
+- Separate all fields with commas according to valid JSON syntax.
+- Use double quotes for all JSON strings.
+- Use the JSON literal null, not the string "null".
+- "reverb_profile" must always be present:
+  - use null for expository segments;
+  - use exactly one allowed reverberation profile for dramatized segments.
+- Every object in the array must follow the same schema.
+
+Before returning the response, internally verify that:
+1. the output is syntactically valid JSON;
+2. every object contains all five required fields;
+3. every segment_type is either "expository" or "dramatized";
+4. every dramatized segment has a valid reverb_profile;
+5. every expository segment has reverb_profile set to null.
+
+Return only the JSON array. Do not include reasoning, comments, Markdown fences, or explanatory text.
 
 
 

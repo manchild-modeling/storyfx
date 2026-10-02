@@ -82,7 +82,7 @@ Do not assign `"distant"` merely because a sound is quiet or masked by another s
 
 Return a JSON array containing one object for each identified Discrete SFX event:
 
-```json id="pib70h"
+```json
 {
   "discrete_sfx_id": "string",
   "anchor": "exact text fragment from the narrative",
