@@ -67,45 +67,27 @@ end: a short phrase copied verbatim from the narrative at the ending boundary of
 For the "start" and "end" values, return a verbatim boundary anchor used only for downstream text matching.
 The anchor is not a summary, quotation, sentence fragment, or semantically complete phrase. Do not shorten an anchor merely because the segment boundary occurs at the end of a grammatically or semantically complete expression.
 Anchor construction:
+
 Anchor construction:
 
-First determine the complete textual span of each segment. Only after the segment boundaries have been decided, derive the "start" and "end" anchors mechanically from that span.
+First determine the complete textual span of each segment. After the segment boundaries have been decided, select verbatim boundary anchors for the "start" and "end" fields.
 
-"start" must contain the first exactly five whitespace-separated words of the segment.
-"end" must contain the last exactly five whitespace-separated words of the segment.
+The purpose of each anchor is to provide a distinctive textual sequence for downstream matching. Prefer a longer contiguous phrase whenever possible so that the anchor is unlikely to occur elsewhere in the narrative.
 
-Treat anchor extraction as a mechanical copying operation, not as semantic phrase selection.
-Do not select a shorter phrase merely because it forms a complete clause, quotation, sentence ending, or meaningful expression.
-Copy all words verbatim and preserve their original order and punctuation.
+- "start" must begin at the exact first word of the segment.
+- "end" must end at the exact final word of the segment.
+- Copy all anchor text verbatim from the narrative.
+- Do not paraphrase, normalize, reorder, substitute, or omit words within the selected anchor.
+- Prefer the longest natural contiguous phrase that remains clearly associated with the intended boundary.
+- Do not deliberately shorten an anchor merely because a shorter phrase already appears semantically complete.
 
-For "end" specifically:
+Longer anchors are preferred because they provide a more distinctive sequence for downstream text matching.
 
-identify the exact final word of the segment;
+It is important that the anchor must remain entirely within the corresponding segment.
 
-move backward four whitespace-separated words within that same segment;
-copy those five words in their original forward order.
+Never move the actual segment boundary merely to obtain a cleaner or longer anchor.
 
-Example:
-
-Suppose a segment ends with:
-...the lantern flickered once before the corridor fell completely silent.
-
-The final word is:
-silent.
-
-Counting backward four additional whitespace-separated words gives:
-corridor fell completely silent.
-This is only four words, so continue one word farther backward:
-the corridor fell completely silent.
-
-Therefore:
-"end": "the corridor fell completely silent."
-Do not return only:
-"end": "completely silent."
-
-Before returning the response, verify separately for every segment that:
-"start" equals the first five words of that segment;
-"end" equals the last five words of that segment.
+When choosing between multiple valid anchors, prefer the one containing more contiguous verbatim context while still remaining natural and entirely within the segment.
 
 
 must contain the applicable reverberation profile when segment_type is "dramatized". Allowed Values:
