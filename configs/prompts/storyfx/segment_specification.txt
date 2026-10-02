@@ -38,8 +38,8 @@ Each object must follow this schema:
 {
   "segment_id": "string",
   "segment_type": "expository | dramatized",
-  "start": "exact five-word fragment from the beginning boundary",
-  "end": "exact five-word fragment from the ending boundary",
+  "start": "exactly five whitespace-separated words copied verbatim from the segment beginning",
+  "end": "exactly five whitespace-separated words copied verbatim from the segment end",
   "reverb_profile": "string | null"
 }
 
@@ -153,6 +153,7 @@ For every segment object:
 - Do not omit any field.
 - Do not add any additional field.
 - Separate all fields with commas according to valid JSON syntax.
+- Count words by splitting on spaces for the "start" and "end" values; Punctuation attached to a word does not create an additional word.
 - Use double quotes for all JSON strings.
 - Use the JSON literal null, not the string "null".
 - "reverb_profile" must always be present:
