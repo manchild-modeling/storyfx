@@ -206,7 +206,7 @@ Before returning the response, internally verify that:
 3. every segment_type is either "expository" or "dramatized";
 4. every dramatized segment has a valid reverb_profile;
 5. every expository segment has reverb_profile set to null.
-6. every "start" and "end" value is copied verbatim from the narrative and correctly identifies the intended segment boundary and exactly composed of 5 white space-separated words.
+6. every "start" and "end" value is copied verbatim from the narrative and correctly identifies the intended segment boundary.
 
 Return only the JSON array. Do not include reasoning, comments, Markdown fences, or explanatory text.
 
