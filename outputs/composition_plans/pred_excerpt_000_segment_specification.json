@@ -1,0 +1,37 @@
+[
+  {
+    "segment_id": "segment_000",
+    "segment_type": "expository",
+    "start": "Why they came East I don’t know.",
+    "end": "hated his guts.",
+    "reverb_profile": null
+  },
+  {
+    "segment_id": "segment_001",
+    "segment_type": "dramatized",
+    "start": "“Now, don’t think my opinion on these matters is final,”",
+    "end": "We’ll go inside.”",
+    "reverb_profile": "outdoor_open"
+  },
+  {
+    "segment_id": "segment_002",
+    "segment_type": "dramatized",
+    "start": "We walked through a high hallway",
+    "end": "and the rugs and the two young women ballooned slowly to the floor.",
+    "reverb_profile": "indoor_large_reflective"
+  },
+  {
+    "segment_id": "segment_003",
+    "segment_type": "dramatized",
+    "start": "The younger of the two was a stranger to me.",
+    "end": "murmuring an apology for having disturbed her by coming in.",
+    "reverb_profile": "indoor_large_reflective"
+  },
+  {
+    "segment_id": "segment_004",
+    "segment_type": "dramatized",
+    "start": "The other girl, Daisy, made an attempt to rise—she leaned slightly",
+    "end": "into the room.",
+    "reverb_profile": "indoor_large_reflective"
+  }
+]
