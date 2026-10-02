@@ -67,13 +67,45 @@ end: a short phrase copied verbatim from the narrative at the ending boundary of
 For the "start" and "end" values, return a verbatim boundary anchor used only for downstream text matching.
 The anchor is not a summary, quotation, sentence fragment, or semantically complete phrase. Do not shorten an anchor merely because the segment boundary occurs at the end of a grammatically or semantically complete expression.
 Anchor construction:
--Copy a contiguous span of exactly 5 whitespace-separated words verbatim from the narrative.
--Prefer at least 5 words whenever enough surrounding narrative text is available.
--For "start", the anchor must begin at the exact first word of the segment and continue forward into the segment until a sufficiently long matching span has been obtained.
--For "end", the anchor must end at the exact final word of the segment and extend backward within the segment until a sufficiently long matching span has been obtained.
--Do not stop early because a sentence, quotation, clause, or other semantically complete unit ends.
--Do not paraphrase, normalize, reorder, or omit words within the selected span.
--Select enough surrounding words to make the anchor reliably identifiable within the narrative.
+Anchor construction:
+
+First determine the complete textual span of each segment. Only after the segment boundaries have been decided, derive the "start" and "end" anchors mechanically from that span.
+
+"start" must contain the first exactly five whitespace-separated words of the segment.
+"end" must contain the last exactly five whitespace-separated words of the segment.
+
+Treat anchor extraction as a mechanical copying operation, not as semantic phrase selection.
+Do not select a shorter phrase merely because it forms a complete clause, quotation, sentence ending, or meaningful expression.
+Copy all words verbatim and preserve their original order and punctuation.
+
+For "end" specifically:
+
+identify the exact final word of the segment;
+
+move backward four whitespace-separated words within that same segment;
+copy those five words in their original forward order.
+
+Example:
+
+Suppose a segment ends with:
+...the lantern flickered once before the corridor fell completely silent.
+
+The final word is:
+silent.
+
+Counting backward four additional whitespace-separated words gives:
+corridor fell completely silent.
+This is only four words, so continue one word farther backward:
+the corridor fell completely silent.
+
+Therefore:
+"end": "the corridor fell completely silent."
+Do not return only:
+"end": "completely silent."
+
+Before returning the response, verify separately for every segment that:
+"start" equals the first five words of that segment;
+"end" equals the last five words of that segment.
 
 Exact anchor length will be normalized during downstream processing; semantic boundary accuracy and verbatim correspondence are more important than producing a fixed number of words.
 must contain the applicable reverberation profile when segment_type is "dramatized". Allowed Values:
@@ -82,7 +114,7 @@ must contain the applicable reverberation profile when segment_type is "dramatiz
 "indoor_tight_reflective_elongated" - a very small but elongated enclosed space with reflective boundaries (e.g., inside a ventilation shaft)
 "indoor_medium_reflective_regular" - a medium-sized enclosed environment with relatively reflective boundaries and a conventional room-like shape (e.g., classroom, sparsely furnished chamber)
 "indoor_medium_absorbed_regular" - a medium-sized enclosed environment containing substantial sound-absorbing materials or furnishings (e.g., furnished office or bedroom)
-"indoor_medium_reflective_elongated" - a medium-sized elongated environment with hard or reflective boundaries (e.g., subway corridor, stone passageway)
+"indoor_medium_reflective_elongated" - a medium-sized elongated environment with hard or reflective boundaries (e.g., subway corridor, stone passageway, hallway)
 "indoor_medium_absorbed_elongated" - a medium-sized elongated environment with substantial acoustic absorption (e.g., carpeted hallway)
 "indoor_large_reflective" - a large enclosed environment dominated by reflective boundaries. Spatial shape is not separately classified for large spaces assuming the irrelevance due to large distances to the boundaries (e.g., cathedral hall, monumental stone chamber)
 "indoor_large_absorbed" - A large enclosed environment in which furnishings, books, fabrics, crowds, or other materials significantly absorb reflections. Spatial shape is not separately classified for large spaces because the large distance to surrounding boundaries makes this distinction less acoustically significant. (e.g., large library, crowded cathedral hall)
