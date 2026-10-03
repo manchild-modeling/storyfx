@@ -1,0 +1,32 @@
+[
+  {
+    "segment_id": "segment_001",
+    "place": null,
+    "weather": "warm windy weather",
+    "special": null
+  },
+  {
+    "segment_id": "segment_002",
+    "place": "coastal breeze and distant water ambience",
+    "weather": null,
+    "special": null
+  },
+  {
+    "segment_id": "segment_003",
+    "place": null,
+    "weather": "windy weather",
+    "special": null
+  },
+  {
+    "segment_id": "segment_004",
+    "place": null,
+    "weather": "windy weather outside",
+    "special": null
+  },
+  {
+    "segment_id": "segment_005",
+    "place": null,
+    "weather": null,
+    "special": null
+  }
+]

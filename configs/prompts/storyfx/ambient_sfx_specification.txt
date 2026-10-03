@@ -273,6 +273,46 @@ Do not create a layer solely to avoid returning null.
 
 The three layers should remain acoustically non-overlapping and independently generatable.
 
+Output Validity Rules
+
+The response must be valid JSON and parse successfully with a standard JSON parser.
+
+Every segment object must contain exactly these four fields:
+
+"segment_id"
+"place"
+"weather"
+"special"
+
+Do not omit fields and do not add additional fields.
+
+Before returning the response, internally verify that:
+
+every supplied segment appears exactly once;
+
+every segment_id is copied exactly;
+
+every non-null layer represents a persistent or recurring audible phenomenon;
+
+no layer was instantiated merely because a location or visual setting exists;
+
+no bounded Discrete SFX event has been duplicated as ambience;
+
+no sound source is duplicated across place, weather, and special;
+
+every non-null place caption ends in "ambience";
+
+every non-null outdoor/exposed weather caption ends in "weather";
+
+every non-null enclosed-listener weather caption ends in "weather outside";
+
+every special.looping_behavior is exactly "constant" or "intermittent";
+
+unsupported or acoustically insignificant layers are null.
+
+Return only the raw JSON array. Do not use Markdown code fences, reasoning, comments, or explanatory text. The first character of the response must be [ and the final character must be ].
+
+If special.caption is null, then special.looping_behavior must also be null. If special.caption is not null, special.looping_behavior must be exactly "constant" or "intermittent".
 
 Exemplar Input
 For three centuries, Harrow’s Peak had stood as a testament to the ancestral hubris of the ancient Blackwood lineage: a sprawling gothic monstrosity of jagged spires and weeping stone that seemed to sprout of a seed from the bleak, salt-choked moors of Cornwall. The family’s decline was not a sudden tragedy, but a slow, generational rot spreading down centuries. It was written in the ledgers of the mad patriarchs who married their own cousins to keep the bloodline pure, and in the whispered folklore of the nearby village, which spoke of the "Hollow Ones" who roamed the estate’s perimeter at the witching hour. The house itself was a participant in this creeping decay. Its foundations were laid over a subterranean limestone cavern system that breathed a perpetual, icy draft, carrying the scent of wet earth and ancient, copper-tanged blood. The Eastwoods did not own the manor; they were its mere custodians, bound by an unspoken, familial pact to feed the darkness that slumbered beneath the floorboards. Corbin Blackwood, the last of his name, knew this history not as myth, but as a blood-borne imperative, a hereditary memory of dread that pulsed in his veins every time the grandfather clock struck midnight, as if the very manor chanted a cyclic command that anyone to hear it could not, or rather, dare not disobey.
@@ -318,11 +358,11 @@ segment_001 takes place in Corbin's quarters while a violent storm is explicitly
 
 segment_002 moves into the exposed colonnade and courtyard. The persistent storm remains the dominant soundscape. The architectural setting does not require a separate place layer when no independent persistent place sound is established, so place remains null. Because Corbin is directly exposed to the storm, the weather caption ends in "weather" rather than "weather outside". His footsteps are bounded movement and therefore belong to Discrete SFX.
 
-segment_003 takes place inside the grand foyer. The foyer's size and reverberation affect spatial rendering but do not by themselves constitute ambient sound, so place is null. After the doors close, the continuing storm is explicitly reduced to a distant murmur outside and therefore remains eligible as "muffled wind and rain weather outside". The doors closing and staircase footsteps are bounded Discrete SFX.
+segment_003 takes place inside the grand foyer. TThe architectural setting does not require a separate place layer when no independent persistent place sound is established, so place remains null. The storm has not ceased; after the doors close it is explicitly reduced to a distant murmur outside. It therefore continues as "muffled wind and rain weather outside". The doors closing and staircase footsteps are bounded Discrete SFX.
 
-segment_004 occurs at the interior threshold leading into the library. No persistent environmental sound independent of bounded narrative events is clearly established. The location itself does not justify generic corridor ambience. Therefore place, weather, and special are all null.
+segment_004 occurs at the interior threshold leading into the library. The storm established earlier has not been described as stopping or becoming completely inaudible. Because Corbin remains inside the manor, it therefore continues as weather heard from outside. No independent persistent place sound is established, so place is null. The scene contains no additional persistent special sound, so special is null.
 
-segment_005 takes place inside the library. Its architecture, furniture, and supernatural appearance do not establish a persistent auditory bed. The groaning wood, slipping boots, ladder-wheel screech, breaking glass, structural shudder, splintering floor, body impact, and ladder collapse are bounded events belonging to Discrete SFX. No persistent weather or recurring special sound is established, so all Ambient SFX layers are null.
+segment_005 takes place inside the library. The continuing storm remains part of the broader environmental soundscape because the narrative provides no indication that it has ceased or become acoustically inaccessible. Since Corbin remains indoors, it is represented as weather outside. The library's architecture and furnishings do not independently establish place ambience. The groaning wood, slipping boots, ladder-wheel screech, breaking glass, structural shudder, splintering floor, body impact, and ladder collapse are bounded events belonging to Discrete SFX rather than ambience. No additional persistent special sound is established.
 
 Exemplar Output
 
@@ -331,57 +371,45 @@ Exemplar Output
     "segment_id": "segment_001",
     "place": null,
     "weather": "windy rainstorm weather outside",
-    "special": null
+    "special": {
+      "caption": null,
+      "looping_behavior": null
+    }
   },
   {
     "segment_id": "segment_002",
     "place": null,
     "weather": "windy rainstorm weather",
-    "special": null
+    "special": {
+      "caption": null,
+      "looping_behavior": null
+    }
   },
   {
     "segment_id": "segment_003",
     "place": null,
     "weather": "windy rain weather outside",
-    "special": null
+    "special": {
+      "caption": null,
+      "looping_behavior": null
+    }
   },
   {
     "segment_id": "segment_004",
     "place": null,
-    "weather": windy rainstorm weather outside,
-    "special": null
+    "weather": "windy rainstorm weather outside",
+    "special": {
+      "caption": null,
+      "looping_behavior": null
+    }
   },
   {
     "segment_id": "segment_005",
     "place": null,
-    "weather": windy rainstorm weather outside,
-    "special": null
+    "weather": "windy rainstorm weather outside",
+    "special": {
+      "caption": null,
+      "looping_behavior": null
+    }
   }
 ]
-
-Output Validity Rules
-
-The response must be valid JSON and parse successfully with a standard JSON parser.
-
-Every segment object must contain exactly these four fields:
-
-"segment_id"
-"place"
-"weather"
-"special"
-
-Do not omit fields and do not add additional fields.
-Before returning the response, internally verify that:
-every supplied segment appears exactly once;
-every segment_id is copied exactly;
-every non-null layer represents a persistent or recurring audible phenomenon;
-no layer was instantiated mrely because a location or visual setting exists;
-no bounded Discrete SFX event has been duplicated as ambience;
-no sound source is duplicated across place, weather, and special;
-every non-null place caption ends in "ambience";
-every non-null outdoor/exposed weather caption ends in "weather";
-every non-null enclosed-listener weather caption ends in "weather outside";
-every special.looping_behavior is exactly "constant" or "intermittent";
-unsupported or acoustically insignificant layers are null.
-
-Return only the raw JSON array. Do not use Markdown code fences, reasoning, comments, or explanatory text. The first character of the response must be [ and the final character must be ].
