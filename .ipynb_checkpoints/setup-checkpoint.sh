@@ -225,7 +225,9 @@ echo "=== 9. Installing Hugging Face CLI ==="
 
 python -m pip install --upgrade \
     huggingface_hub \
-    hf_xet
+    hf_xet \
+    praatio
+    transformers
 
 hf --help >/dev/null
 echo

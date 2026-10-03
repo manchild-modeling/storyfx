@@ -224,9 +224,19 @@ echo
 echo "=== 9. Installing Hugging Face CLI ==="
 
 python -m pip install --upgrade \
+    transformers \
+    accelerate \
+    safetensors \
     huggingface_hub \
     hf_xet \
     praatio
+
+python -m pip install -U \
+    "flash-linear-attention[cuda]"
+
+python -m pip install -U \
+    git+https://github.com/Dao-AILab/causal-conv1d.git \
+    --no-build-isolation
 
 hf --help >/dev/null
 echo

@@ -40,11 +40,11 @@ Changes in narrative focus do not by themselves create new segments. In particul
 - a new object or person is described;
 - a discrete sound event occurs.
 
-The important thing is that if these changes occur while the characters remain within the same persistent acoustic environment, retain them within the same Dramatized Segment.
+Once a dramatized acoustic environment has been established, preserve the current segment across changes in paragraph, character focus, dialogue, narration style, descriptive subject, action, or conversational turn. These are not segment boundaries. Create another dramatized segment only when the narrative establishes a different persistent acoustic environment that would require a different ambience track or reverb treatment.
 
-Before creating a new Dramatized Segment, ask:
-"Would the persistent ambience or spatial reverberation need to change at this exact boundary?"
-If the answer is no, do not create a new segment.
+A passage may move from architectural description, to character description, to dialogue, to physical action while all characters remain on the same porch. This entire passage remains one segment because the persistent acoustic environment has not changed.
+
+Before every proposed boundary between two dramatized segments, compare the acoustic environment immediately before and immediately after the boundary. If the same ambience track and reverb profile could naturally continue across the boundary without modification, ignore the boundary.
 
 Given a plain narrative text input, return a JSON array containing one object for each identified narrative segment:
 Each object must follow this schema:
