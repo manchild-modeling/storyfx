@@ -229,7 +229,8 @@ python -m pip install --upgrade \
     safetensors \
     huggingface_hub \
     hf_xet \
-    praatio
+    praatio \
+    pedalboard
 
 python -m pip install -U \
     "flash-linear-attention[cuda]"

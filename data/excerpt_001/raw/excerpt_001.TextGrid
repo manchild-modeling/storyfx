@@ -1,0 +1,71 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 388.598 
+tiers? <exists> 
+size = 1 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "segments" 
+        xmin = 0 
+        xmax = 388.598 
+        intervals: size = 13 
+        intervals [1]:
+            xmin = 0 
+            xmax = 31.05 
+            text = "For three centuries, Harrow’s Peak had stood as a testament to the ancestral hubris of the ancient Blackwood lineage: a sprawling gothic monstrosity of jagged spires and weeping stone that seemed to sprout of a seed from the bleak, salt-choked moors of Cornwall. The family’s decline was not a sudden tragedy, but a slow, generational rot spreading down centuries. It was written in the ledgers of the mad patriarchs who married their own cousins to keep the bloodline pure," 
+        intervals [2]:
+            xmin = 31.05 
+            xmax = 56.849 
+            text = "and in the whispered folklore of the nearby village, which spoke of the ""Hollow Ones"" who roamed the estate’s perimeter at the witching hour. The house itself was a participant in this creeping decay. Its foundations were laid over a subterranean limestone cavern system that breathed a perpetual, icy draft, carrying the scent of wet earth and ancient, copper-tanged blood." 
+        intervals [3]:
+            xmin = 56.849 
+            xmax = 91.98 
+            text = "The Eastwoods did not own the manor; they were its mere custodians, bound by an unspoken, familial pact to feed the darkness that slumbered beneath the floorboards. Corbin Blackwood, the last of his name, knew this history not as myth, but as a blood-borne imperative, a hereditary memory of dread that pulsed in his veins every time the grandfather clock struck midnight, as if the very manor chanted a cyclic command that anyone to hear it could not, or rather, dare not disobey." 
+        intervals [4]:
+            xmin = 91.98 
+            xmax = 120.239 
+            text = "That night, Corbin barely heard the chimes against the scream of wind-charged rain that had been raging since dusk. Like clockwork, he plunged himself into a musty mink cloak and snatched the burning lantern off the dresser. From his quarters, his anxious strides carried him down a rain-lashed colonnade that funneled across a benighted, overgrown courtyard, shrouding his sight like the abyss of a storm-haunted sea." 
+        intervals [5]:
+            xmin = 120.239 
+            xmax = 152.015 
+            text = "In forty years he had spent his time at Harrow's Peak so far, he had witnessed rain carrying any wind or thunder perhaps once. To thus face a storm of such preternatural might on that particular night seemed to spell the come of the world's end. He could not shake the terrible thought that the manor had managed to seep into the dreams that preyed his sleep and learn the secret design he meant to execute that night, and in its wrath had summoned a weather spirit not of this world." 
+        intervals [6]:
+            xmin = 152.015 
+            xmax = 180.27 
+            text = "Yet he no longer had the luxury of fear by then; in one way or another he must end the black legacy by that night. 
+Pushing open the massive oak front doors, he crossed the threshold from the bedlam into a dust-choked, funereal realm of silence. The titanic doors boomed shut behind him and sealed out the storm to a distant murmur, as if some power had prevented sound from entering the premises of the manor." 
+        intervals [7]:
+            xmin = 180.27 
+            xmax = 212.448 
+            text = "The only source of light and warmth to comfort him emanated from the lantern in his hands and covered but a smidgeon of the grand foyer. To a newcomer, the great hall could have stretched on for untold miles out of sight and would have taken him the whole night to reach from one wall to another. For him, immersing himself in thousands of blind trips in the Stygian domain had deposited in the folds of his brain an indelible map charting every nook and cranny better than sight." 
+        intervals [8]:
+            xmin = 212.448 
+            xmax = 246.95 
+            text = "Using this vivid memory, he headed toward the grand staircase and began climbing the steps, shivering and praying that the shapes in the darkness that he imagined seeing did not materialize in reality.
+He finally reached the threshold of the room he meant to enter, but he could not take the step beyond it. The steam of mettle that had carried him so far have withered out. It was the library. He was not supposed to enter, and he knew very well what awaited him to prevent him from doing so." 
+        intervals [9]:
+            xmin = 246.95 
+            xmax = 280.835 
+            text = "Frozen at that ominous spot, he began to hear a rising deluge of whispers spoken from a thousand unseen mouths seemingly originating from the surrounding walls. The whispers repeated the same words over and over, ""Go hence where you belong...go hence where you belong."" Some of those voices he distinctly recognized as those of his parents and his grandparents and his great grandparents, all of whom laid buried in the vined graveyard behind the manor." 
+        intervals [10]:
+            xmin = 280.835 
+            xmax = 308.148 
+            text = "What force within animated him he could not tell, but he took the step forward and continued onward, with his breath stuck in his throat.
+The grand library was a cavernous tomb of forgotten knowledge, but tonight, it was violently alive. The towering mahogany bookshelves seemed to lean inward, the ancient wood groaning like the ribs of a dying leviathan." 
+        intervals [11]:
+            xmin = 308.148 
+            xmax = 339.631 
+            text = "Suddenly, the temperature plummeted, frosting the glass of the nearby windows. The flames of the lantern turned a sickly, bruised purple and stretched horizontally, pointing directly at the far wall.
+From the deep shadows between the shelves, the darkness detached itself. It did not move like a man, but flowed like viscous, sentient tar, pooling across the frayed Persian rug before rising into a towering, faceless silhouette." 
+        intervals [12]:
+            xmin = 339.631 
+            xmax = 370.732 
+            text = "Corbin lunged forward, his boots slipping on the suddenly slick carpet. He needed the iron-bound ledger on the highest shelf—the only artifact capable of severing the hereditary pact.
+He scrambled up the rolling wooden ladder, the brass wheels screeching in metallic protest. The shadow lashed out, a tendril of pure, freezing cold whipping past his ear and shattering a row of heavy glass inkwells. Corbin grabbed the ledger, its rusted metal corners biting deep into his palm." 
+        intervals [13]:
+            xmin = 370.732 
+            xmax = 388.598 
+            text = "The library violently shuddered. The floorboards beneath the ladder buckled, splintering upward with the sound of snapping bone. Corbin threw his weight backward, crashing onto a heavy oak reading table as the ladder collapsed into the yawning, dark fissure that had just torn open in the floor." 

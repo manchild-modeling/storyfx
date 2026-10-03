@@ -1,0 +1,47 @@
+[
+  {
+    "segment_id": "segment_001",
+    "place": null,
+    "weather": "windy rainstorm weather outside",
+    "special": {
+      "caption": null,
+      "looping_behavior": null
+    }
+  },
+  {
+    "segment_id": "segment_002",
+    "place": null,
+    "weather": "windy rainstorm weather",
+    "special": {
+      "caption": null,
+      "looping_behavior": null
+    }
+  },
+  {
+    "segment_id": "segment_003",
+    "place": null,
+    "weather": "muffled windy rain weather outside",
+    "special": {
+      "caption": null,
+      "looping_behavior": null
+    }
+  },
+  {
+    "segment_id": "segment_004",
+    "place": null,
+    "weather": "muffled windy rain weather outside",
+    "special": {
+      "caption": "recurring supernatural whispers from walls",
+      "looping_behavior": "intermittent"
+    }
+  },
+  {
+    "segment_id": "segment_005",
+    "place": null,
+    "weather": "muffled windy rain weather outside",
+    "special": {
+      "caption": null,
+      "looping_behavior": null
+    }
+  }
+]

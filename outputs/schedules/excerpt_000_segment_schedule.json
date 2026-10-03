@@ -1,0 +1,38 @@
+[
+  {
+    "segment_id": "segment_000",
+    "segment_type": "expository",
+    "start": "Why they came East I don’t know.",
+    "end": "some irrecoverable football game.",
+    "reverb_profile": null,
+    "start_time": 0.0,
+    "end_time": 29.24
+  },
+  {
+    "segment_id": "segment_001",
+    "segment_type": "dramatized",
+    "start": "And so it happened that on a warm windy evening",
+    "end": "his legs apart on the front porch.",
+    "reverb_profile": "outdoor_open",
+    "start_time": 29.24,
+    "end_time": 81.65
+  },
+  {
+    "segment_id": "segment_002",
+    "segment_type": "dramatized",
+    "start": "His speaking voice, a gruff husky tenor,",
+    "end": "“We’ll go inside.”",
+    "reverb_profile": "outdoor_open",
+    "start_time": 81.65,
+    "end_time": 132.19
+  },
+  {
+    "segment_id": "segment_003",
+    "segment_type": "dramatized",
+    "start": "We walked through a high hallway",
+    "end": "ballooned slowly to the floor.",
+    "reverb_profile": "indoor_large_absorbed",
+    "start_time": 132.19,
+    "end_time": 204.55
+  }
+]

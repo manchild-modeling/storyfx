@@ -1,0 +1,121 @@
+[
+  {
+    "discrete_sfx_id": "discrete_sfx000",
+    "anchor": "Corbin barely heard the chimes",
+    "caption": "grandfather clock chiming",
+    "duration": "brief",
+    "transmission_profile": null
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx001",
+    "anchor": "he plunged himself into a musty mink cloak",
+    "caption": "heavy fur cloak rustling",
+    "duration": "brief",
+    "transmission_profile": null
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx002",
+    "anchor": "snatched the burning lantern off the dresser",
+    "caption": "metal lantern abruptly lifted",
+    "duration": "brief",
+    "transmission_profile": null
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx003",
+    "anchor": "his anxious strides carried him down a rain-lashed colonnade",
+    "caption": "hurried footsteps",
+    "duration": "prolonged",
+    "transmission_profile": null
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx004",
+    "anchor": "Pushing open the massive oak front doors",
+    "caption": "massive oak doors slowly creaking open",
+    "duration": "prolonged",
+    "transmission_profile": null
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx005",
+    "anchor": "The titanic doors boomed shut behind him",
+    "caption": "massive wooden doors booming shut",
+    "duration": "impulse",
+    "transmission_profile": null
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx006",
+    "anchor": "he headed toward the grand staircase and began climbing the steps",
+    "caption": "footsteps ascending a staircase",
+    "duration": "prolonged",
+    "transmission_profile": null
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx007",
+    "anchor": "the ancient wood groaning like the ribs of a dying leviathan",
+    "caption": "wooden bookshelves groaning",
+    "duration": "brief",
+    "transmission_profile": null
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx008",
+    "anchor": "The flames of the lantern turned a sickly, bruised purple and stretched horizontally",
+    "caption": "flame wooshing",
+    "duration": "brief",
+    "transmission_profile": null
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx009",
+    "anchor": "his boots slipping on the suddenly slick carpet",
+    "caption": "boots slipping across carpet",
+    "duration": "brief",
+    "transmission_profile": null
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx010",
+    "anchor": "the brass wheels screeching in metallic protest",
+    "caption": "metal wheels screeching",
+    "duration": "brief",
+    "transmission_profile": null
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx011",
+    "anchor": "a tendril of pure, freezing cold whipping past his ear",
+    "caption": "fast wooshing sound",
+    "duration": "brief",
+    "transmission_profile": null
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx012",
+    "anchor": "shattering a row of heavy glass inkwells",
+    "caption": "inkwells shattering",
+    "duration": "impulse",
+    "transmission_profile": null
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx013",
+    "anchor": "The library violently shuddered",
+    "caption": "large building rumble",
+    "duration": "brief",
+    "transmission_profile": null
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx014",
+    "anchor": "The floorboards beneath the ladder buckled, splintering upward with the sound of snapping bone",
+    "caption": "wood splintering sharply",
+    "duration": "brief",
+    "transmission_profile": null
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx015",
+    "anchor": "crashing onto a heavy oak reading table",
+    "caption": "body crashing onto wooden table",
+    "duration": "impulse",
+    "transmission_profile": null
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx016",
+    "anchor": "the ladder collapsed into the yawning, dark fissure",
+    "caption": "loud floor collapsing",
+    "duration": "brief",
+    "transmission_profile": null
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "segment_id": "segment_000",
+    "segment_type": "expository",
+    "start": "For three centuries, Harrow’s Peak",
+    "end": "or rather, dare not disobey.",
+    "reverb_profile": null,
+    "start_time": 0.0,
+    "end_time": 91.6
+  },
+  {
+    "segment_id": "segment_001",
+    "segment_type": "dramatized",
+    "start": "That night, Corbin barely heard",
+    "end": "burning lantern off the dresser.",
+    "reverb_profile": "indoor_medium_absorbed_regular",
+    "start_time": 91.6,
+    "end_time": 107.11
+  },
+  {
+    "segment_id": "segment_002",
+    "segment_type": "dramatized",
+    "start": "From his quarters, his anxious",
+    "end": "black legacy by that night.",
+    "reverb_profile": "outdoor_open",
+    "start_time": 107.11,
+    "end_time": 159.9
+  },
+  {
+    "segment_id": "segment_003",
+    "segment_type": "dramatized",
+    "start": "Pushing open the massive oak",
+    "end": "did not materialize in reality.",
+    "reverb_profile": "indoor_large_reflective",
+    "start_time": 159.9,
+    "end_time": 226.25
+  },
+  {
+    "segment_id": "segment_004",
+    "segment_type": "dramatized",
+    "start": "He finally reached the threshold",
+    "end": "breath stuck in his throat.",
+    "reverb_profile": "indoor_medium_reflective_elongated",
+    "start_time": 226.25,
+    "end_time": 290.9
+  },
+  {
+    "segment_id": "segment_005",
+    "segment_type": "dramatized",
+    "start": "The grand library was a",
+    "end": "torn open in the floor.",
+    "reverb_profile": "indoor_large_absorbed",
+    "start_time": 290.9,
+    "end_time": 388.41
+  }
+]

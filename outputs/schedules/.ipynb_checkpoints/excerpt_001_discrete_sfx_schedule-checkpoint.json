@@ -1,0 +1,189 @@
+[
+  {
+    "discrete_sfx_id": "discrete_sfx000",
+    "anchor": "Corbin barely heard the chimes",
+    "caption": "grandfather clock chiming",
+    "duration": "brief",
+    "transmission_profile": null,
+    "anchor_time": 95.24,
+    "duration_time": 2.0,
+    "parent_segment": "segment_001",
+    "reverb_profile": "indoor_medium_absorbed_regular"
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx001",
+    "anchor": "he plunged himself into a musty mink cloak",
+    "caption": "heavy fur cloak rustling",
+    "duration": "brief",
+    "transmission_profile": null,
+    "anchor_time": 104.19,
+    "duration_time": 1.14,
+    "parent_segment": "segment_001",
+    "reverb_profile": "indoor_medium_absorbed_regular"
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx002",
+    "anchor": "snatched the burning lantern off the dresser",
+    "caption": "metal lantern abruptly lifted",
+    "duration": "brief",
+    "transmission_profile": null,
+    "anchor_time": 107.11,
+    "duration_time": 1.49,
+    "parent_segment": "segment_002",
+    "reverb_profile": "outdoor_open"
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx003",
+    "anchor": "his anxious strides carried him down a rain-lashed colonnade",
+    "caption": "hurried footsteps",
+    "duration": "prolonged",
+    "transmission_profile": null,
+    "anchor_time": 112.36,
+    "duration_time": 2.8,
+    "parent_segment": "segment_002",
+    "reverb_profile": "outdoor_open"
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx004",
+    "anchor": "Pushing open the massive oak front doors",
+    "caption": "massive oak doors slowly creaking open",
+    "duration": "prolonged",
+    "transmission_profile": null,
+    "anchor_time": 163.15,
+    "duration_time": 3.26,
+    "parent_segment": "segment_003",
+    "reverb_profile": "indoor_large_reflective"
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx005",
+    "anchor": "The titanic doors boomed shut behind him",
+    "caption": "massive wooden doors booming shut",
+    "duration": "impulse",
+    "transmission_profile": null,
+    "anchor_time": 172.27,
+    "duration_time": 0.94,
+    "parent_segment": "segment_003",
+    "reverb_profile": "indoor_large_reflective"
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx006",
+    "anchor": "he headed toward the grand staircase and began climbing the steps",
+    "caption": "footsteps ascending a staircase",
+    "duration": "prolonged",
+    "transmission_profile": null,
+    "anchor_time": 218.66,
+    "duration_time": 3.4,
+    "parent_segment": "segment_003",
+    "reverb_profile": "indoor_large_reflective"
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx007",
+    "anchor": "the ancient wood groaning like the ribs of a dying leviathan",
+    "caption": "wooden bookshelves groaning",
+    "duration": "brief",
+    "transmission_profile": null,
+    "anchor_time": 307.79,
+    "duration_time": 1.22,
+    "parent_segment": "segment_005",
+    "reverb_profile": "indoor_large_absorbed"
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx008",
+    "anchor": "The flames of the lantern turned a sickly, bruised purple and stretched horizontally",
+    "caption": "flame wooshing",
+    "duration": "brief",
+    "transmission_profile": null,
+    "anchor_time": 319.41,
+    "duration_time": 1.69,
+    "parent_segment": "segment_005",
+    "reverb_profile": "indoor_large_absorbed"
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx009",
+    "anchor": "his boots slipping on the suddenly slick carpet",
+    "caption": "boots slipping across carpet",
+    "duration": "brief",
+    "transmission_profile": null,
+    "anchor_time": 344.55,
+    "duration_time": 1.14,
+    "parent_segment": "segment_005",
+    "reverb_profile": "indoor_large_absorbed"
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx010",
+    "anchor": "the brass wheels screeching in metallic protest",
+    "caption": "metal wheels screeching",
+    "duration": "brief",
+    "transmission_profile": null,
+    "anchor_time": 356.93,
+    "duration_time": 1.41,
+    "parent_segment": "segment_005",
+    "reverb_profile": "indoor_large_absorbed"
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx011",
+    "anchor": "a tendril of pure, freezing cold whipping past his ear",
+    "caption": "fast wooshing sound",
+    "duration": "brief",
+    "transmission_profile": null,
+    "anchor_time": 362.49,
+    "duration_time": 1.81,
+    "parent_segment": "segment_005",
+    "reverb_profile": "indoor_large_absorbed"
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx012",
+    "anchor": "shattering a row of heavy glass inkwells",
+    "caption": "inkwells shattering",
+    "duration": "impulse",
+    "transmission_profile": null,
+    "anchor_time": 365.24,
+    "duration_time": 0.81,
+    "parent_segment": "segment_005",
+    "reverb_profile": "indoor_large_absorbed"
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx013",
+    "anchor": "The library violently shuddered",
+    "caption": "large building rumble",
+    "duration": "brief",
+    "transmission_profile": null,
+    "anchor_time": 373.06,
+    "duration_time": 1.38,
+    "parent_segment": "segment_005",
+    "reverb_profile": "indoor_large_absorbed"
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx014",
+    "anchor": "The floorboards beneath the ladder buckled, splintering upward with the sound of snapping bone",
+    "caption": "wood splintering sharply",
+    "duration": "brief",
+    "transmission_profile": null,
+    "anchor_time": 378.49,
+    "duration_time": 2.01,
+    "parent_segment": "segment_005",
+    "reverb_profile": "indoor_large_absorbed"
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx015",
+    "anchor": "crashing onto a heavy oak reading table",
+    "caption": "body crashing onto wooden table",
+    "duration": "impulse",
+    "transmission_profile": null,
+    "anchor_time": 382.89,
+    "duration_time": 0.91,
+    "parent_segment": "segment_005",
+    "reverb_profile": "indoor_large_absorbed"
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx016",
+    "anchor": "the ladder collapsed into the yawning, dark fissure",
+    "caption": "loud floor collapsing",
+    "duration": "brief",
+    "transmission_profile": null,
+    "anchor_time": 386.08,
+    "duration_time": 1.41,
+    "parent_segment": "segment_005",
+    "reverb_profile": "indoor_large_absorbed"
+  }
+]

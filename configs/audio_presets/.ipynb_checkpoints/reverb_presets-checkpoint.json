@@ -1,0 +1,109 @@
+{
+  "indoor_tight_reflective_regular": {
+    "room_size": 0.28,
+    "damping": 0.25,
+    "wet_level": 0.18,
+    "dry_level": 0.82,
+    "width": 0.55,
+    "freeze_mode": 0.0
+  },
+
+  "indoor_tight_absorbed_regular": {
+    "room_size": 0.25,
+    "damping": 0.78,
+    "wet_level": 0.10,
+    "dry_level": 0.90,
+    "width": 0.45,
+    "freeze_mode": 0.0
+  },
+
+  "indoor_tight_reflective_elongated": {
+    "room_size": 0.40,
+    "damping": 0.28,
+    "wet_level": 0.22,
+    "dry_level": 0.78,
+    "width": 0.62,
+    "freeze_mode": 0.0
+  },
+
+  "indoor_medium_reflective_regular": {
+    "room_size": 0.52,
+    "damping": 0.30,
+    "wet_level": 0.24,
+    "dry_level": 0.76,
+    "width": 0.72,
+    "freeze_mode": 0.0
+  },
+
+  "indoor_medium_absorbed_regular": {
+    "room_size": 0.48,
+    "damping": 0.72,
+    "wet_level": 0.15,
+    "dry_level": 0.85,
+    "width": 0.65,
+    "freeze_mode": 0.0
+  },
+
+  "indoor_medium_reflective_elongated": {
+    "room_size": 0.62,
+    "damping": 0.32,
+    "wet_level": 0.28,
+    "dry_level": 0.72,
+    "width": 0.78,
+    "freeze_mode": 0.0
+  },
+
+  "indoor_medium_absorbed_elongated": {
+    "room_size": 0.58,
+    "damping": 0.68,
+    "wet_level": 0.19,
+    "dry_level": 0.81,
+    "width": 0.72,
+    "freeze_mode": 0.0
+  },
+
+  "indoor_large_reflective": {
+    "room_size": 0.86,
+    "damping": 0.22,
+    "wet_level": 0.34,
+    "dry_level": 0.66,
+    "width": 0.92,
+    "freeze_mode": 0.0
+  },
+
+  "indoor_large_absorbed": {
+    "room_size": 0.78,
+    "damping": 0.65,
+    "wet_level": 0.23,
+    "dry_level": 0.77,
+    "width": 0.86,
+    "freeze_mode": 0.0
+  },
+
+  "outdoor_open": {
+    "room_size": 0.08,
+    "damping": 0.55,
+    "wet_level": 0.025,
+    "dry_level": 0.975,
+    "width": 1.0,
+    "freeze_mode": 0.0
+  },
+
+  "underwater": {
+    "room_size": 0.60,
+    "damping": 0.92,
+    "wet_level": 0.30,
+    "dry_level": 0.70,
+    "width": 0.60,
+    "freeze_mode": 0.0
+  },
+
+  "dream_like": {
+    "room_size": 0.92,
+    "damping": 0.48,
+    "wet_level": 0.42,
+    "dry_level": 0.58,
+    "width": 1.0,
+    "freeze_mode": 0.0
+  }
+}

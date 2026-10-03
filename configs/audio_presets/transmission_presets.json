@@ -1,0 +1,61 @@
+{
+  "muffled": {
+    "gain_db": -3.0,
+    "highpass_hz": 80.0,
+    "lowpass_hz": 2200.0,
+    "compression": {
+      "threshold_db": -20.0,
+      "ratio": 2.0,
+      "attack_ms": 15.0,
+      "release_ms": 120.0
+    }
+  },
+
+  "distant": {
+    "gain_db": -8.0,
+    "highpass_hz": 180.0,
+    "lowpass_hz": 5000.0,
+    "compression": {
+      "threshold_db": -24.0,
+      "ratio": 1.8,
+      "attack_ms": 20.0,
+      "release_ms": 150.0
+    }
+  },
+
+  "underwater": {
+    "gain_db": -4.0,
+    "highpass_hz": 60.0,
+    "lowpass_hz": 900.0,
+    "compression": {
+      "threshold_db": -18.0,
+      "ratio": 3.0,
+      "attack_ms": 10.0,
+      "release_ms": 180.0
+    }
+  },
+
+  "electronic": {
+    "gain_db": -2.0,
+    "highpass_hz": 300.0,
+    "lowpass_hz": 4200.0,
+    "compression": {
+      "threshold_db": -16.0,
+      "ratio": 3.5,
+      "attack_ms": 5.0,
+      "release_ms": 80.0
+    }
+  },
+
+  "dream_like": {
+    "gain_db": -3.0,
+    "highpass_hz": 120.0,
+    "lowpass_hz": 6000.0,
+    "compression": {
+      "threshold_db": -22.0,
+      "ratio": 1.5,
+      "attack_ms": 25.0,
+      "release_ms": 200.0
+    }
+  }
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "discrete_sfx_id": "discrete_sfx000",
+    "anchor": "a snub-nosed motorboat that bumped the tide offshore",
+    "caption": "small boat bumping against water",
+    "duration": "brief",
+    "transmission_profile": "distant",
+    "anchor_time": 123.07,
+    "duration_time": 2.0,
+    "parent_segment": "segment_002",
+    "reverb_profile": "outdoor_open"
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx001",
+    "anchor": "I must have stood for a few moments listening to the whip and snap of the curtains",
+    "caption": "curtains whipping and snapping in wind",
+    "duration": "prolonged",
+    "transmission_profile": null,
+    "anchor_time": 189.12,
+    "duration_time": 2.62,
+    "parent_segment": "segment_003",
+    "reverb_profile": "indoor_large_absorbed"
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx002",
+    "anchor": "the groan of a picture on the wall",
+    "caption": "picture frame groaning on wall",
+    "duration": "brief",
+    "transmission_profile": null,
+    "anchor_time": 190.91,
+    "duration_time": 1.49,
+    "parent_segment": "segment_003",
+    "reverb_profile": "indoor_large_absorbed"
+  },
+  {
+    "discrete_sfx_id": "discrete_sfx003",
+    "anchor": "a boom as Tom Buchanan shut the rear windows",
+    "caption": "windows slamming shut",
+    "duration": "impulse",
+    "transmission_profile": null,
+    "anchor_time": 195.78,
+    "duration_time": 0.84,
+    "parent_segment": "segment_003",
+    "reverb_profile": "indoor_large_absorbed"
+  }
+]
