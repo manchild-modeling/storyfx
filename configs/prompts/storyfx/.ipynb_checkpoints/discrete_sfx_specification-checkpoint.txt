@@ -120,6 +120,22 @@ Would including it require speculative cinematic sonification beyond what the na
 
 Include the event only when Questions 1–4 are satisfied and Question 5 is false.
 
+Anchor Construction
+
+Construct the anchor only after the event has been selected.
+
+The anchor serves two purposes: it identifies the exact narrative occurrence for downstream text matching, and its ending boundary determines when the corresponding Discrete SFX is scheduled.
+
+Discrete SFX anchoring follow a post-narration scheduling strategy: the listener should first hear enough narration to understand the event, after which the corresponding sound effect is rendered. Therefore, the final word of the anchor should mark the point at which the narrated event has been sufficiently communicated for the sound effect to follow naturally.
+
+Copy one contiguous span verbatim from the narrative corresponding to the identified event.
+The anchor must contain the wording that directly expresses or strongly implies the selected event.
+End the anchor at the earliest natural point where the event has been sufficiently communicated to the listener.
+Do not extend the anchor into subsequent narration that is unrelated to identifying the event, because doing so would unnecessarily delay SFX playback.
+The anchor may include preceding contextual words when they help distinguish the occurrence from similar passages.
+Do not paraphrase, normalize, reorder, substitute, or omit words within the selected span.
+Do not choose the anchor according to sentence or clause boundaries alone; its ending should correspond to the semantic completion of the particular audible event.
+
 
 
 Exemplar Input: 
@@ -177,7 +193,6 @@ Exemplar Reasoning
 
 Exemplar Output
 
-```json
 [
   {
     "discrete_sfx_id": "discrete_sfx000",
@@ -273,14 +288,14 @@ Exemplar Output
   {
     "discrete_sfx_id": "discrete_sfx013",
     "anchor": "The library violently shuddered",
-    "caption": "large structural rumble",
+    "caption": "large building rumble",
     "duration": "brief",
     "transmission_profile": null
   },
   {
     "discrete_sfx_id": "discrete_sfx014",
     "anchor": "The floorboards beneath the ladder buckled, splintering upward with the sound of snapping bone",
-    "caption": "wooden splintering sharply",
+    "caption": "wood splintering sharply",
     "duration": "brief",
     "transmission_profile": null
   },
@@ -299,8 +314,8 @@ Exemplar Output
     "transmission_profile": null
   }
 ]
-```
 
+The exemplar demonstrates the discrete SFX eligible event-selection logic, anchor construction strategy, caption-writing style, and required output structure.
 
 Output Validity Rules
 

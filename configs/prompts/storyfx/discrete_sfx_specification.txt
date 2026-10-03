@@ -193,7 +193,6 @@ Exemplar Reasoning
 
 Exemplar Output
 
-```json
 [
   {
     "discrete_sfx_id": "discrete_sfx000",
@@ -315,7 +314,7 @@ Exemplar Output
     "transmission_profile": null
   }
 ]
-```
+
 The exemplar demonstrates the discrete SFX eligible event-selection logic, anchor construction strategy, caption-writing style, and required output structure.
 
 Output Validity Rules
