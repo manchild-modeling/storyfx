@@ -1,34 +1,34 @@
 [
   {
-    "scene_id": "E46tUcDStm",
-    "scene_type": "telling",
-    "start_word_offset": 0.93,
-    "end_word_offset": 25.790001,
-    "reverb_profile": null,
-    "location_summary": "Character background"
+    "segment_id": "excerpt_000_segment_000",
+    "labelstudio_id": "E46tUcDStm",
+    "segment_type": "expository",
+    "start_anchor_time": 0.93,
+    "end_anchor_time": 29.24,
+    "reverb_profile": null
   },
   {
-    "scene_id": "tr5rdLxbcu",
-    "scene_type": "showing",
-    "start_word_offset": 30.648701,
-    "end_word_offset": 129.915894,
-    "reverb_profile": "outdoor_open",
-    "location_summary": "Buchanan waterfront estate exterior; tides and wind"
+    "segment_id": "excerpt_000_segment_001",
+    "labelstudio_id": "tr5rdLxbcu",
+    "segment_type": "dramatized",
+    "start_anchor_time": 30.65,
+    "end_anchor_time": 132.19,
+    "reverb_profile": "outdoor_open"
   },
   {
-    "scene_id": "CARw-j7Pd-",
-    "scene_type": "showing",
-    "start_word_offset": 133.335907,
-    "end_word_offset": 134.955902,
-    "reverb_profile": "indoor_medium_reflective_elongated",
-    "location_summary": "Buchanan mansion hallway"
+    "segment_id": "excerpt_000_segment_002",
+    "labelstudio_id": "CARw-j7Pd-",
+    "segment_type": "dramatized",
+    "start_anchor_time": 133.34,
+    "end_anchor_time": 134.96,
+    "reverb_profile": "indoor_medium_reflective_elongated"
   },
   {
-    "scene_id": "3hFCNy4Hk6",
-    "scene_type": "showing",
-    "start_word_offset": 135.635895,
-    "end_word_offset": 136.055893,
-    "reverb_profile": "indoor_medium_absorbed_regular",
-    "location_summary": "Buchanan drawing room; wind blowing"
+    "segment_id": "excerpt_000_segment_003",
+    "labelstudio_id": "3hFCNy4Hk6",
+    "segment_type": "dramatized",
+    "start_anchor_time": 135.64,
+    "end_anchor_time": 204.55,
+    "reverb_profile": "indoor_medium_absorbed_regular"
   }
 ]
