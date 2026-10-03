@@ -82,7 +82,7 @@ Do not assign `"distant"` merely because a sound is quiet or masked by another s
 
 Return a JSON array containing one object for each identified Discrete SFX event:
 
-```json id="pib70h"
+```json
 {
   "discrete_sfx_id": "string",
   "anchor": "exact text fragment from the narrative",
@@ -105,6 +105,22 @@ Field requirements:
 - `transmission_profile`: use exactly `"muffled"`, `"distant"`, `"underwater"`, `"electronic"`, `"dream_like"`, or `null`.
 
 The number of events must be determined entirely by the narrative. Do not create an event for every action, object, sentence, or acoustically suggestive word. Include only temporally bounded sounds that are explicitly described or strongly and conventionally implied.
+
+Event Selection Check
+
+Determine the eligible Discrete SFX events before constructing their output objects.
+
+For every candidate, ask:
+
+Does a particular event actually occur at this narrative position?
+Is there a bounded audible phenomenon that a listener could reasonably hear?
+Is that sound explicitly described or strongly and conventionally implied by the physical event?
+Is it distinct from persistent or recurring ambience?
+Would including it require speculative cinematic sonification beyond what the narrative supports?
+
+Include the event only when Questions 1–4 are satisfied and Question 5 is false.
+
+
 
 Exemplar Input: 
 For three centuries, Harrow’s Peak had stood as a testament to the ancestral hubris of the ancient Blackwood lineage: a sprawling gothic monstrosity of jagged spires and weeping stone that seemed to sprout of a seed from the bleak, salt-choked moors of Cornwall. The family’s decline was not a sudden tragedy, but a slow, generational rot spreading down centuries. It was written in the ledgers of the mad patriarchs who married their own cousins to keep the bloodline pure, and in the whispered folklore of the nearby village, which spoke of the "Hollow Ones" who roamed the estate’s perimeter at the witching hour. The house itself was a participant in this creeping decay. Its foundations were laid over a subterranean limestone cavern system that breathed a perpetual, icy draft, carrying the scent of wet earth and ancient, copper-tanged blood. The Eastwoods did not own the manor; they were its mere custodians, bound by an unspoken, familial pact to feed the darkness that slumbered beneath the floorboards. Corbin Blackwood, the last of his name, knew this history not as myth, but as a blood-borne imperative, a hereditary memory of dread that pulsed in his veins every time the grandfather clock struck midnight, as if the very manor chanted a cyclic command that anyone to hear it could not, or rather, dare not disobey.
@@ -286,4 +302,36 @@ Exemplar Output
 ```
 
 
-Return only the JSON array without additional explanation.
+Output Validity Rules
+
+The response must be valid JSON and must parse successfully with a standard JSON parser.
+
+Every event object must contain exactly these five fields:
+
+"discrete_sfx_id"
+"anchor"
+"caption"
+"duration"
+"transmission_profile"
+
+Do not omit any field and do not add additional fields.
+
+Use:
+
+double quotes for all JSON strings;
+the JSON literal null, not the string "null";
+exactly "impulse", "brief", or "prolonged" for duration;
+exactly "muffled", "distant", "underwater", "electronic", "dream_like", or null for transmission_profile.
+
+Before returning the response, internally verify that:
+the output is syntactically valid JSON;
+every object contains exactly the five required fields;
+all discrete_sfx_id values are unique and sequential in narrative order;
+every anchor occurs verbatim in the supplied narrative;
+every caption describes the audible result rather than narrative meaning or visual action;
+every duration uses one of the three allowed categories;
+every transmission_profile uses an allowed value or null;
+every included event is temporally bounded and explicitly audible or strongly acoustically implied;
+no persistent ambient condition, intelligible speech, negated event, hypothetical event, habitual reference, or speculative sonification has been included.
+
+Return only the JSON array. Do not include reasoning, comments, Markdown fences, or explanatory text.

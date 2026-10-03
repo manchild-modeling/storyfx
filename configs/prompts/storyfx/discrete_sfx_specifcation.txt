@@ -106,6 +106,38 @@ Field requirements:
 
 The number of events must be determined entirely by the narrative. Do not create an event for every action, object, sentence, or acoustically suggestive word. Include only temporally bounded sounds that are explicitly described or strongly and conventionally implied.
 
+Event Selection Check
+
+Determine the eligible Discrete SFX events before constructing their output objects.
+
+For every candidate, ask:
+
+Does a particular event actually occur at this narrative position?
+Is there a bounded audible phenomenon that a listener could reasonably hear?
+Is that sound explicitly described or strongly and conventionally implied by the physical event?
+Is it distinct from persistent or recurring ambience?
+Would including it require speculative cinematic sonification beyond what the narrative supports?
+
+Include the event only when Questions 1–4 are satisfied and Question 5 is false.
+
+Anchor Construction
+
+Construct the anchor only after the event has been selected.
+
+The anchor serves two purposes: it identifies the exact narrative occurrence for downstream text matching, and its ending boundary determines when the corresponding Discrete SFX is scheduled.
+
+Discrete SFX anchoring follow a post-narration scheduling strategy: the listener should first hear enough narration to understand the event, after which the corresponding sound effect is rendered. Therefore, the final word of the anchor should mark the point at which the narrated event has been sufficiently communicated for the sound effect to follow naturally.
+
+Copy one contiguous span verbatim from the narrative corresponding to the identified event.
+The anchor must contain the wording that directly expresses or strongly implies the selected event.
+End the anchor at the earliest natural point where the event has been sufficiently communicated to the listener.
+Do not extend the anchor into subsequent narration that is unrelated to identifying the event, because doing so would unnecessarily delay SFX playback.
+The anchor may include preceding contextual words when they help distinguish the occurrence from similar passages.
+Do not paraphrase, normalize, reorder, substitute, or omit words within the selected span.
+Do not choose the anchor according to sentence or clause boundaries alone; its ending should correspond to the semantic completion of the particular audible event.
+
+
+
 Exemplar Input: 
 For three centuries, Harrow’s Peak had stood as a testament to the ancestral hubris of the ancient Blackwood lineage: a sprawling gothic monstrosity of jagged spires and weeping stone that seemed to sprout of a seed from the bleak, salt-choked moors of Cornwall. The family’s decline was not a sudden tragedy, but a slow, generational rot spreading down centuries. It was written in the ledgers of the mad patriarchs who married their own cousins to keep the bloodline pure, and in the whispered folklore of the nearby village, which spoke of the "Hollow Ones" who roamed the estate’s perimeter at the witching hour. The house itself was a participant in this creeping decay. Its foundations were laid over a subterranean limestone cavern system that breathed a perpetual, icy draft, carrying the scent of wet earth and ancient, copper-tanged blood. The Eastwoods did not own the manor; they were its mere custodians, bound by an unspoken, familial pact to feed the darkness that slumbered beneath the floorboards. Corbin Blackwood, the last of his name, knew this history not as myth, but as a blood-borne imperative, a hereditary memory of dread that pulsed in his veins every time the grandfather clock struck midnight, as if the very manor chanted a cyclic command that anyone to hear it could not, or rather, dare not disobey.
 That night, Corbin barely heard the chimes against the scream of wind-charged rain that had been raging since dusk. Like clockwork, he plunged himself into a musty mink cloak and snatched the burning lantern off the dresser. From his quarters, his anxious strides carried him down a rain-lashed colonnade that funneled across a benighted, overgrown courtyard, shrouding his sight like the abyss of a storm-haunted sea. In forty years he had spent his time at Harrow's Peak so far, he had witnessed rain carrying any wind or thunder perhaps once. To thus face a storm of such preternatural might on that particular night seemed to spell the come of the world's end. He could not shake the terrible thought that the manor had managed to seep into the dreams that preyed his sleep and learn the secret design he meant to execute that night, and in its wrath had summoned a weather spirit not of this world. Yet he no longer had the luxury of fear by then; in one way or another he must end the black legacy by that night. 
@@ -257,14 +289,14 @@ Exemplar Output
   {
     "discrete_sfx_id": "discrete_sfx013",
     "anchor": "The library violently shuddered",
-    "caption": "large structural rumble",
+    "caption": "large building rumble",
     "duration": "brief",
     "transmission_profile": null
   },
   {
     "discrete_sfx_id": "discrete_sfx014",
     "anchor": "The floorboards beneath the ladder buckled, splintering upward with the sound of snapping bone",
-    "caption": "wooden splintering sharply",
+    "caption": "wood splintering sharply",
     "duration": "brief",
     "transmission_profile": null
   },
@@ -284,6 +316,38 @@ Exemplar Output
   }
 ]
 ```
+The exemplar demonstrates the discrete SFX eligible event-selection logic, anchor construction strategy, caption-writing style, and required output structure.
 
+Output Validity Rules
 
-Return only the JSON array without additional explanation.
+The response must be valid JSON and must parse successfully with a standard JSON parser.
+
+Every event object must contain exactly these five fields:
+
+"discrete_sfx_id"
+"anchor"
+"caption"
+"duration"
+"transmission_profile"
+
+Do not omit any field and do not add additional fields.
+
+Use:
+
+double quotes for all JSON strings;
+the JSON literal null, not the string "null";
+exactly "impulse", "brief", or "prolonged" for duration;
+exactly "muffled", "distant", "underwater", "electronic", "dream_like", or null for transmission_profile.
+
+Before returning the response, internally verify that:
+the output is syntactically valid JSON;
+every object contains exactly the five required fields;
+all discrete_sfx_id values are unique and sequential in narrative order;
+every anchor occurs verbatim in the supplied narrative;
+every caption describes the audible result rather than narrative meaning or visual action;
+every duration uses one of the three allowed categories;
+every transmission_profile uses an allowed value or null;
+every included event is temporally bounded and explicitly audible or strongly acoustically implied;
+no persistent ambient condition, intelligible speech, negated event, hypothetical event, habitual reference, or speculative sonification has been included.
+
+Return only the JSON array. Do not include reasoning, comments, Markdown fences, or explanatory text.
