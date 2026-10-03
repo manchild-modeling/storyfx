@@ -273,44 +273,31 @@ Do not create a layer solely to avoid returning null.
 
 The three layers should remain acoustically non-overlapping and independently generatable.
 
-Output Validity Rules
+Segment Preservation Rule
 
-The response must be valid JSON and parse successfully with a standard JSON parser.
+The supplied segment list is authoritative and must not be modified.
 
-Every segment object must contain exactly these four fields:
+For every input segment, return exactly one output object with the same segment_id.
 
-"segment_id"
-"place"
-"weather"
-"special"
+You must not:
 
-Do not omit fields and do not add additional fields.
+merge adjacent segments;
 
-Before returning the response, internally verify that:
+split a segment into multiple outputs;
 
-every supplied segment appears exactly once;
+omit a segment because its ambience is identical to a neighboring segment;
 
-every segment_id is copied exactly;
+renumber or rename segment identifiers;
 
-every non-null layer represents a persistent or recurring audible phenomenon;
+reorder segments.
 
-no layer was instantiated merely because a location or visual setting exists;
+If multiple adjacent segments share the same ambience, repeat the same ambience specification for each segment separately.
 
-no bounded Discrete SFX event has been duplicated as ambience;
+If a segment contains no eligible Ambient SFX, still return that segment with null values for the unsupported layers.
 
-no sound source is duplicated across place, weather, and special;
+The number of output objects must exactly equal the number of supplied input segments.
 
-every non-null place caption ends in "ambience";
 
-every non-null outdoor/exposed weather caption ends in "weather";
-
-every non-null enclosed-listener weather caption ends in "weather outside";
-
-every special.looping_behavior is exactly "constant" or "intermittent";
-
-unsupported or acoustically insignificant layers are null.
-
-Return only the raw JSON array. Do not use Markdown code fences, reasoning, comments, or explanatory text. The first character of the response must be [ and the final character must be ].
 
 If special.caption is null, then special.looping_behavior must also be null. If special.caption is not null, special.looping_behavior must be exactly "constant" or "intermittent".
 
@@ -413,3 +400,46 @@ Exemplar Output
     }
   }
 ]
+
+Output Validity Rules
+
+The response must be valid JSON and parse successfully with a standard JSON parser.
+
+Every segment object must contain exactly these four fields:
+
+"segment_id"
+"place"
+"weather"
+"special"
+
+Do not omit fields and do not add additional fields.
+
+Before returning the response, internally verify that:
+
+the number of output objects exactly equals the number of supplied input segments;
+
+every supplied segment_id appears exactly once;
+
+no additional segment_id is introduced;
+
+output segment order exactly matches input segment order;
+
+acoustically identical adjacent segments are still returned as separate objects;
+
+every non-null layer represents a persistent or recurring audible phenomenon;
+
+no layer was instantiated merely because a location or visual setting exists;
+
+no bounded Discrete SFX event has been duplicated as ambience;
+
+no sound source is duplicated across place, weather, and special;
+
+every non-null place caption ends in "ambience";
+
+every non-null outdoor/exposed weather caption ends in "weather";
+
+every non-null enclosed-listener weather caption ends in "weather outside";
+
+if special.caption is null, then special.looping_behavior is also null;
+
+if special.caption is not null, then special.looping_behavior is exactly "constant" or "intermittent".

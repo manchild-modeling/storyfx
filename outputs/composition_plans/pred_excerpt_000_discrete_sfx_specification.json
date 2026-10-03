@@ -2,15 +2,15 @@
   {
     "discrete_sfx_id": "discrete_sfx000",
     "anchor": "a snub-nosed motorboat that bumped the tide offshore",
-    "caption": "motorboat bumping against water",
-    "duration": "impulse",
-    "transmission_profile": null
+    "caption": "small boat bumping against water",
+    "duration": "brief",
+    "transmission_profile": "distant"
   },
   {
     "discrete_sfx_id": "discrete_sfx001",
-    "anchor": "listening to the whip and snap of the curtains",
+    "anchor": "I must have stood for a few moments listening to the whip and snap of the curtains",
     "caption": "curtains whipping and snapping in wind",
-    "duration": "brief",
+    "duration": "prolonged",
     "transmission_profile": null
   },
   {
@@ -22,7 +22,7 @@
   },
   {
     "discrete_sfx_id": "discrete_sfx003",
-    "anchor": "There was a boom as Tom Buchanan shut the rear windows",
+    "anchor": "a boom as Tom Buchanan shut the rear windows",
     "caption": "windows slamming shut",
     "duration": "impulse",
     "transmission_profile": null
