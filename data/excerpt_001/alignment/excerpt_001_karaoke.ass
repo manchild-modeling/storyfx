@@ -1,0 +1,134 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Karaoke,Arial,58,&H00FFFFFF,&H0000FFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3,1,2,120,120,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.07,0:00:02.96,Karaoke,,0,0,0,,{\k13}for {\k34}three {\k93}centuries {\k33}harrow's {\k37}peak {\k15}had {\k28}stood {\k13}as
+Dialogue: 0,0:00:02.96,0:00:05.53,Karaoke,,0,0,0,,{\k7}a {\k68}testament {\k9}to {\k14}the {\k65}ancestral {\k68}hubris {\k11}of {\k15}the
+Dialogue: 0,0:00:05.53,0:00:09.78,Karaoke,,0,0,0,,{\k49}ancient {\k51}blackwood {\k69}lineage {\k9}a {\k73}sprawling {\k43}gothic {\k83}monstrosity {\k14}of
+Dialogue: 0,0:00:09.78,0:00:12.94,Karaoke,,0,0,0,,{\k43}jagged {\k71}spires {\k22}and {\k40}weeping {\k64}stone {\k15}that {\k28}seemed {\k10}to
+Dialogue: 0,0:00:12.94,0:00:15.21,Karaoke,,0,0,0,,{\k39}sprout {\k9}of {\k7}a {\k54}seed {\k18}from {\k8}the {\k44}bleak {\k43}salt
+Dialogue: 0,0:00:15.21,0:00:18.97,Karaoke,,0,0,0,,{\k41}choked {\k54}moors {\k17}of {\k78}cornwall {\k9}the {\k40}family's {\k58}decline {\k19}was
+Dialogue: 0,0:00:18.97,0:00:22.21,Karaoke,,0,0,0,,{\k19}not {\k8}a {\k45}sudden {\k71}tragedy {\k10}but {\k7}a {\k55}slow {\k84}generational
+Dialogue: 0,0:00:22.24,0:00:25.71,Karaoke,,0,0,0,,{\k46}rot {\k61}spreading {\k38}down {\k85}centuries {\k10}it {\k16}was {\k28}written {\k9}in
+Dialogue: 0,0:00:25.71,0:00:28.18,Karaoke,,0,0,0,,{\k7}the {\k52}ledgers {\k9}of {\k8}the {\k38}mad {\k72}patriarchs {\k13}who {\k41}married
+Dialogue: 0,0:00:28.18,0:00:30.89,Karaoke,,0,0,0,,{\k17}their {\k22}own {\k64}cousins {\k11}to {\k26}keep {\k9}the {\k67}bloodline {\k55}pure
+Dialogue: 0,0:00:31.28,0:00:33.37,Karaoke,,0,0,0,,{\k13}and {\k7}in {\k8}the {\k49}whispered {\k65}folklore {\k11}of {\k9}the {\k47}nearby
+Dialogue: 0,0:00:33.37,0:00:36.79,Karaoke,,0,0,0,,{\k59}village {\k22}which {\k34}spoke {\k14}of {\k26}the {\k38}hollow {\k67}ones {\k15}who
+Dialogue: 0,0:00:36.79,0:00:39.56,Karaoke,,0,0,0,,{\k41}roamed {\k11}the {\k45}estate's {\k66}perimeter {\k12}at {\k9}the {\k44}witching {\k44}hour
+Dialogue: 0,0:00:40.27,0:00:42.63,Karaoke,,0,0,0,,{\k9}the {\k26}house {\k59}itself {\k17}was {\k5}a {\k83}participant {\k13}in {\k20}this
+Dialogue: 0,0:00:42.63,0:00:45.94,Karaoke,,0,0,0,,{\k57}creeping {\k66}decay {\k15}its {\k71}foundations {\k12}were {\k30}laid {\k25}over {\k6}a
+Dialogue: 0,0:00:45.94,0:00:50.46,Karaoke,,0,0,0,,{\k86}subterranean {\k63}limestone {\k46}cavern {\k60}system {\k14}that {\k59}breathed {\k7}a {\k93}perpetual
+Dialogue: 0,0:00:50.52,0:00:53.75,Karaoke,,0,0,0,,{\k44}icy {\k69}draft {\k39}carrying {\k9}the {\k41}scent {\k16}of {\k27}wet {\k41}earth
+Dialogue: 0,0:00:54.01,0:00:58.10,Karaoke,,0,0,0,,{\k21}and {\k65}ancient {\k37}copper {\k64}tanged {\k53}blood {\k21}the {\k52}eastwoods {\k17}did
+Dialogue: 0,0:00:58.10,0:01:00.48,Karaoke,,0,0,0,,{\k21}not {\k38}own {\k8}the {\k50}manor {\k12}they {\k14}were {\k18}its {\k28}mere
+Dialogue: 0,0:01:00.48,0:01:04.77,Karaoke,,0,0,0,,{\k106}custodians {\k46}bound {\k16}by {\k10}an {\k78}unspoken {\k58}familial {\k52}pact {\k11}to
+Dialogue: 0,0:01:04.77,0:01:08.33,Karaoke,,0,0,0,,{\k46}feed {\k9}the {\k67}darkness {\k19}that {\k68}slumbered {\k41}beneath {\k10}the {\k92}floorboards
+Dialogue: 0,0:01:09.13,0:01:12.26,Karaoke,,0,0,0,,{\k40}corbin {\k64}blackwood {\k9}the {\k39}last {\k8}of {\k21}his {\k47}name {\k21}knew
+Dialogue: 0,0:01:12.26,0:01:14.48,Karaoke,,0,0,0,,{\k21}this {\k52}history {\k23}not {\k18}as {\k48}myth {\k11}but {\k13}as {\k6}a
+Dialogue: 0,0:01:14.48,0:01:18.47,Karaoke,,0,0,0,,{\k44}blood {\k33}borne {\k93}imperative {\k9}a {\k65}hereditary {\k45}memory {\k19}of {\k54}dread
+Dialogue: 0,0:01:18.66,0:01:20.96,Karaoke,,0,0,0,,{\k22}that {\k47}pulsed {\k9}in {\k19}his {\k59}veins {\k26}every {\k40}time {\k8}the
+Dialogue: 0,0:01:20.96,0:01:24.15,Karaoke,,0,0,0,,{\k68}grandfather {\k43}clock {\k43}struck {\k67}midnight {\k15}as {\k12}if {\k10}the {\k29}very
+Dialogue: 0,0:01:24.15,0:01:27.40,Karaoke,,0,0,0,,{\k47}manor {\k47}chanted {\k8}a {\k58}cyclic {\k68}command {\k14}that {\k42}anyone {\k13}to
+Dialogue: 0,0:01:27.40,0:01:30.57,Karaoke,,0,0,0,,{\k28}hear {\k20}it {\k22}could {\k46}not {\k15}or {\k46}rather {\k28}dare {\k46}not
+Dialogue: 0,0:01:30.71,0:01:35.24,Karaoke,,0,0,0,,{\k89}disobey {\k22}that {\k42}night {\k44}corbin {\k34}barely {\k33}heard {\k9}the {\k56}chimes
+Dialogue: 0,0:01:35.24,0:01:38.04,Karaoke,,0,0,0,,{\k33}against {\k9}the {\k54}scream {\k14}of {\k36}wind {\k51}charged {\k55}rain {\k10}that
+Dialogue: 0,0:01:38.04,0:01:41.67,Karaoke,,0,0,0,,{\k10}had {\k19}been {\k56}raging {\k38}since {\k52}dusk {\k21}like {\k67}clockwork {\k15}he
+Dialogue: 0,0:01:41.67,0:01:44.59,Karaoke,,0,0,0,,{\k42}plunged {\k51}himself {\k23}into {\k5}a {\k46}musty {\k36}mink {\k43}cloak {\k16}and
+Dialogue: 0,0:01:44.59,0:01:47.86,Karaoke,,0,0,0,,{\k58}snatched {\k9}the {\k38}burning {\k54}lantern {\k24}off {\k11}the {\k58}dresser {\k17}from
+Dialogue: 0,0:01:47.86,0:01:50.81,Karaoke,,0,0,0,,{\k16}his {\k59}quarters {\k17}his {\k39}anxious {\k62}strides {\k33}carried {\k17}him {\k27}down
+Dialogue: 0,0:01:50.81,0:01:53.60,Karaoke,,0,0,0,,{\k8}a {\k39}rain {\k37}lashed {\k71}colonnade {\k14}that {\k43}funneled {\k41}across {\k5}a
+Dialogue: 0,0:01:53.60,0:01:57.54,Karaoke,,0,0,0,,{\k69}benighted {\k63}overgrown {\k78}courtyard {\k48}shrouding {\k18}his {\k36}sight {\k22}like {\k13}the
+Dialogue: 0,0:01:57.54,0:02:01.15,Karaoke,,0,0,0,,{\k59}abyss {\k11}of {\k7}a {\k52}storm {\k50}haunted {\k59}sea {\k14}in {\k35}forty
+Dialogue: 0,0:02:01.15,0:02:03.27,Karaoke,,0,0,0,,{\k56}years {\k10}he {\k12}had {\k28}spent {\k18}his {\k39}time {\k8}at {\k41}harrow's
+Dialogue: 0,0:02:03.27,0:02:06.45,Karaoke,,0,0,0,,{\k35}peak {\k27}so {\k53}far {\k10}he {\k10}had {\k46}witnessed {\k50}rain {\k46}carrying
+Dialogue: 0,0:02:06.45,0:02:09.93,Karaoke,,0,0,0,,{\k21}any {\k41}wind {\k16}or {\k63}thunder {\k53}perhaps {\k57}once {\k9}to {\k25}thus
+Dialogue: 0,0:02:09.93,0:02:12.63,Karaoke,,0,0,0,,{\k32}face {\k7}a {\k49}storm {\k11}of {\k37}such {\k74}preternatural {\k44}might {\k16}on
+Dialogue: 0,0:02:12.63,0:02:15.41,Karaoke,,0,0,0,,{\k22}that {\k56}particular {\k40}night {\k29}seemed {\k10}to {\k36}spell {\k12}the {\k47}come
+Dialogue: 0,0:02:15.41,0:02:18.23,Karaoke,,0,0,0,,{\k11}of {\k10}the {\k58}world's {\k52}end {\k11}he {\k15}could {\k18}not {\k38}shake
+Dialogue: 0,0:02:18.23,0:02:20.70,Karaoke,,0,0,0,,{\k11}the {\k50}terrible {\k45}thought {\k13}that {\k8}the {\k36}manor {\k18}had {\k41}managed
+Dialogue: 0,0:02:20.70,0:02:22.93,Karaoke,,0,0,0,,{\k10}to {\k45}seep {\k18}into {\k11}the {\k61}dreams {\k22}that {\k37}preyed {\k19}his
+Dialogue: 0,0:02:22.93,0:02:25.67,Karaoke,,0,0,0,,{\k47}sleep {\k19}and {\k26}learn {\k10}the {\k44}secret {\k58}design {\k14}he {\k24}meant
+Dialogue: 0,0:02:25.67,0:02:28.39,Karaoke,,0,0,0,,{\k16}to {\k55}execute {\k24}that {\k39}night {\k14}and {\k10}in {\k18}its {\k53}wrath
+Dialogue: 0,0:02:28.67,0:02:31.13,Karaoke,,0,0,0,,{\k13}had {\k44}summoned {\k7}a {\k34}weather {\k57}spirit {\k40}not {\k16}of {\k27}this
+Dialogue: 0,0:02:31.13,0:02:33.90,Karaoke,,0,0,0,,{\k58}world {\k14}yet {\k9}he {\k14}no {\k38}longer {\k16}had {\k8}the {\k51}luxury
+Dialogue: 0,0:02:33.90,0:02:36.24,Karaoke,,0,0,0,,{\k12}of {\k42}fear {\k24}by {\k44}then {\k17}in {\k20}one {\k17}way {\k12}or
+Dialogue: 0,0:02:36.24,0:02:39.21,Karaoke,,0,0,0,,{\k50}another {\k12}he {\k28}must {\k43}end {\k11}the {\k35}black {\k57}legacy {\k26}by
+Dialogue: 0,0:02:39.21,0:02:42.62,Karaoke,,0,0,0,,{\k28}that {\k42}night {\k32}pushing {\k31}open {\k8}the {\k49}massive {\k23}oak {\k37}front
+Dialogue: 0,0:02:42.62,0:02:45.54,Karaoke,,0,0,0,,{\k53}doors {\k12}he {\k41}crossed {\k11}the {\k67}threshold {\k17}from {\k9}the {\k57}bedlam
+Dialogue: 0,0:02:45.74,0:02:49.26,Karaoke,,0,0,0,,{\k27}into {\k5}a {\k42}dust {\k47}choked {\k77}funereal {\k52}realm {\k14}of {\k79}silence
+Dialogue: 0,0:02:49.51,0:02:52.71,Karaoke,,0,0,0,,{\k10}the {\k58}titanic {\k45}doors {\k47}boomed {\k44}shut {\k44}behind {\k28}him {\k19}and
+Dialogue: 0,0:02:52.71,0:02:55.37,Karaoke,,0,0,0,,{\k36}sealed {\k21}out {\k10}the {\k57}storm {\k15}to {\k5}a {\k62}distant {\k56}murmur
+Dialogue: 0,0:02:55.68,0:02:58.10,Karaoke,,0,0,0,,{\k13}as {\k13}if {\k29}some {\k48}power {\k20}had {\k48}prevented {\k51}sound {\k19}from
+Dialogue: 0,0:02:58.12,0:03:00.99,Karaoke,,0,0,0,,{\k40}entering {\k9}the {\k68}premises {\k11}of {\k10}the {\k48}manor {\k12}the {\k22}only
+Dialogue: 0,0:03:00.99,0:03:03.34,Karaoke,,0,0,0,,{\k34}source {\k12}of {\k36}light {\k19}and {\k47}warmth {\k10}to {\k42}comfort {\k30}him
+Dialogue: 0,0:03:03.60,0:03:06.11,Karaoke,,0,0,0,,{\k50}emanated {\k16}from {\k10}the {\k48}lantern {\k9}in {\k16}his {\k58}hands {\k18}and
+Dialogue: 0,0:03:06.11,0:03:08.70,Karaoke,,0,0,0,,{\k38}covered {\k12}but {\k3}a {\k73}smidgeon {\k14}of {\k9}the {\k48}grand {\k62}foyer
+Dialogue: 0,0:03:09.38,0:03:11.42,Karaoke,,0,0,0,,{\k11}to {\k5}a {\k66}newcomer {\k8}the {\k22}great {\k33}hall {\k14}could {\k11}have
+Dialogue: 0,0:03:11.42,0:03:14.48,Karaoke,,0,0,0,,{\k42}stretched {\k29}on {\k23}for {\k66}untold {\k65}miles {\k17}out {\k12}of {\k49}sight
+Dialogue: 0,0:03:14.87,0:03:16.51,Karaoke,,0,0,0,,{\k10}and {\k9}would {\k11}have {\k29}taken {\k17}him {\k11}the {\k27}whole {\k50}night
+Dialogue: 0,0:03:16.55,0:03:19.51,Karaoke,,0,0,0,,{\k12}to {\k31}reach {\k27}from {\k26}one {\k45}wall {\k18}to {\k50}another {\k17}for
+Dialogue: 0,0:03:19.51,0:03:23.28,Karaoke,,0,0,0,,{\k41}him {\k42}immersing {\k51}himself {\k15}in {\k64}thousands {\k17}of {\k51}blind {\k51}trips
+Dialogue: 0,0:03:23.28,0:03:25.98,Karaoke,,0,0,0,,{\k10}in {\k9}the {\k56}stygian {\k68}domain {\k12}had {\k62}deposited {\k10}in {\k9}the
+Dialogue: 0,0:03:25.98,0:03:29.29,Karaoke,,0,0,0,,{\k44}folds {\k8}of {\k17}his {\k55}brain {\k12}an {\k58}indelible {\k47}map {\k38}charting
+Dialogue: 0,0:03:29.34,0:03:33.18,Karaoke,,0,0,0,,{\k39}every {\k31}nook {\k19}and {\k57}cranny {\k43}better {\k21}than {\k53}sight {\k40}using
+Dialogue: 0,0:03:33.18,0:03:35.84,Karaoke,,0,0,0,,{\k20}this {\k38}vivid {\k57}memory {\k14}he {\k29}headed {\k34}toward {\k7}the {\k40}grand
+Dialogue: 0,0:03:35.84,0:03:39.86,Karaoke,,0,0,0,,{\k79}staircase {\k14}and {\k40}began {\k51}climbing {\k10}the {\k63}steps {\k68}shivering {\k21}and
+Dialogue: 0,0:03:39.86,0:03:42.11,Karaoke,,0,0,0,,{\k60}praying {\k14}that {\k9}the {\k48}shapes {\k8}in {\k9}the {\k63}darkness {\k14}that
+Dialogue: 0,0:03:42.11,0:03:46.25,Karaoke,,0,0,0,,{\k11}he {\k59}imagined {\k59}seeing {\k16}did {\k25}not {\k111}materialize {\k21}in {\k72}reality
+Dialogue: 0,0:03:47.20,0:03:49.34,Karaoke,,0,0,0,,{\k11}he {\k40}finally {\k35}reached {\k11}the {\k59}threshold {\k10}of {\k10}the {\k38}room
+Dialogue: 0,0:03:49.34,0:03:51.43,Karaoke,,0,0,0,,{\k16}he {\k30}meant {\k17}to {\k48}enter {\k9}but {\k7}he {\k17}could {\k21}not
+Dialogue: 0,0:03:51.50,0:03:54.22,Karaoke,,0,0,0,,{\k24}take {\k12}the {\k36}step {\k44}beyond {\k23}it {\k10}the {\k38}steam {\k14}of
+Dialogue: 0,0:03:54.22,0:03:56.93,Karaoke,,0,0,0,,{\k51}mettle {\k15}that {\k16}had {\k35}carried {\k16}him {\k29}so {\k60}far {\k21}have
+Dialogue: 0,0:03:56.93,0:04:00.82,Karaoke,,0,0,0,,{\k38}withered {\k39}out {\k13}it {\k28}was {\k12}the {\k85}library {\k10}he {\k16}was
+Dialogue: 0,0:04:00.82,0:04:03.36,Karaoke,,0,0,0,,{\k20}not {\k55}supposed {\k15}to {\k45}enter {\k12}and {\k8}he {\k23}knew {\k28}very
+Dialogue: 0,0:04:03.36,0:04:05.70,Karaoke,,0,0,0,,{\k44}well {\k15}what {\k40}awaited {\k27}him {\k13}to {\k42}prevent {\k27}him {\k26}from
+Dialogue: 0,0:04:05.70,0:04:09.81,Karaoke,,0,0,0,,{\k36}doing {\k46}so {\k58}frozen {\k14}at {\k21}that {\k41}ominous {\k53}spot {\k9}he
+Dialogue: 0,0:04:09.81,0:04:12.67,Karaoke,,0,0,0,,{\k32}began {\k12}to {\k21}hear {\k7}a {\k65}rising {\k62}deluge {\k16}of {\k71}whispers
+Dialogue: 0,0:04:12.89,0:04:17.23,Karaoke,,0,0,0,,{\k52}spoken {\k19}from {\k6}a {\k69}thousand {\k70}unseen {\k69}mouths {\k45}seemingly {\k71}originating
+Dialogue: 0,0:04:17.23,0:04:20.60,Karaoke,,0,0,0,,{\k19}from {\k8}the {\k66}surrounding {\k66}walls {\k9}the {\k53}whispers {\k46}repeated {\k9}the
+Dialogue: 0,0:04:20.60,0:04:24.29,Karaoke,,0,0,0,,{\k43}same {\k55}words {\k51}over {\k28}and {\k53}over {\k18}go {\k46}hence {\k11}where
+Dialogue: 0,0:04:24.29,0:04:28.53,Karaoke,,0,0,0,,{\k17}you {\k66}belong {\k21}go {\k60}hence {\k17}where {\k21}you {\k76}belong {\k18}some
+Dialogue: 0,0:04:28.53,0:04:31.50,Karaoke,,0,0,0,,{\k11}of {\k22}those {\k56}voices {\k11}he {\k59}distinctly {\k86}recognized {\k18}as {\k34}those
+Dialogue: 0,0:04:31.50,0:04:34.47,Karaoke,,0,0,0,,{\k8}of {\k15}his {\k69}parents {\k12}and {\k13}his {\k97}grandparents {\k12}and {\k13}his
+Dialogue: 0,0:04:34.47,0:04:37.73,Karaoke,,0,0,0,,{\k40}great {\k99}grandparents {\k21}all {\k10}of {\k25}whom {\k40}laid {\k44}buried {\k10}in
+Dialogue: 0,0:04:37.73,0:04:41.96,Karaoke,,0,0,0,,{\k9}the {\k50}vined {\k83}graveyard {\k59}behind {\k10}the {\k52}manor {\k20}what {\k47}force
+Dialogue: 0,0:04:41.96,0:04:45.39,Karaoke,,0,0,0,,{\k50}within {\k54}animated {\k34}him {\k11}he {\k22}could {\k28}not {\k51}tell {\k10}but
+Dialogue: 0,0:04:45.39,0:04:48.43,Karaoke,,0,0,0,,{\k8}he {\k24}took {\k11}the {\k32}step {\k61}forward {\k17}and {\k61}continued {\k59}onward
+Dialogue: 0,0:04:48.80,0:04:51.77,Karaoke,,0,0,0,,{\k10}with {\k16}his {\k45}breath {\k46}stuck {\k10}in {\k21}his {\k48}throat {\k8}the
+Dialogue: 0,0:04:51.77,0:04:54.99,Karaoke,,0,0,0,,{\k39}grand {\k72}library {\k19}was {\k6}a {\k62}cavernous {\k51}tomb {\k11}of {\k63}forgotten
+Dialogue: 0,0:04:54.99,0:04:59.86,Karaoke,,0,0,0,,{\k58}knowledge {\k17}but {\k56}tonight {\k12}it {\k19}was {\k87}violently {\k77}alive {\k11}the
+Dialogue: 0,0:04:59.86,0:05:04.04,Karaoke,,0,0,0,,{\k53}towering {\k50}mahogany {\k81}bookshelves {\k40}seemed {\k11}to {\k40}lean {\k70}inward {\k14}the
+Dialogue: 0,0:05:04.04,0:05:06.36,Karaoke,,0,0,0,,{\k40}ancient {\k38}wood {\k63}groaning {\k18}like {\k11}the {\k46}ribs {\k10}of {\k7}a
+Dialogue: 0,0:05:06.36,0:05:10.75,Karaoke,,0,0,0,,{\k58}dying {\k84}leviathan {\k63}suddenly {\k9}the {\k54}temperature {\k69}plummeted
+Dialogue: 0,0:05:11.08,0:05:14.15,Karaoke,,0,0,0,,{\k51}frosting {\k8}the {\k49}glass {\k10}of {\k9}the {\k48}nearby {\k77}windows {\k9}the
+Dialogue: 0,0:05:14.15,0:05:17.01,Karaoke,,0,0,0,,{\k41}flames {\k10}of {\k8}the {\k56}lantern {\k32}turned {\k7}a {\k59}sickly {\k73}bruised
+Dialogue: 0,0:05:17.01,0:05:20.94,Karaoke,,0,0,0,,{\k58}purple {\k16}and {\k46}stretched {\k93}horizontally {\k35}pointing {\k66}directly {\k11}at {\k10}the
+Dialogue: 0,0:05:20.94,0:05:24.29,Karaoke,,0,0,0,,{\k39}far {\k60}wall {\k16}from {\k7}the {\k26}deep {\k59}shadows {\k43}between {\k9}the
+Dialogue: 0,0:05:24.29,0:05:28.31,Karaoke,,0,0,0,,{\k70}shelves {\k9}the {\k66}darkness {\k59}detached {\k66}itself {\k8}it {\k15}did {\k21}not
+Dialogue: 0,0:05:28.31,0:05:31.48,Karaoke,,0,0,0,,{\k40}move {\k21}like {\k5}a {\k55}man {\k13}but {\k56}flowed {\k25}like {\k73}viscous
+Dialogue: 0,0:05:31.56,0:05:35.60,Karaoke,,0,0,0,,{\k66}sentient {\k57}tar {\k43}pooling {\k42}across {\k12}the {\k48}frayed {\k45}persian {\k42}rug
+Dialogue: 0,0:05:35.85,0:05:40.57,Karaoke,,0,0,0,,{\k31}before {\k52}rising {\k29}into {\k5}a {\k79}towering {\k60}faceless {\k76}silhouette {\k51}corbin
+Dialogue: 0,0:05:40.57,0:05:43.55,Karaoke,,0,0,0,,{\k41}lunged {\k61}forward {\k18}his {\k32}boots {\k49}slipping {\k11}on {\k9}the {\k49}suddenly
+Dialogue: 0,0:05:43.55,0:05:46.36,Karaoke,,0,0,0,,{\k43}slick {\k50}carpet {\k14}he {\k28}needed {\k14}the {\k35}iron {\k33}bound {\k44}ledger
+Dialogue: 0,0:05:46.36,0:05:49.39,Karaoke,,0,0,0,,{\k12}on {\k9}the {\k52}highest {\k51}shelf {\k14}the {\k25}only {\k62}artifact {\k46}capable
+Dialogue: 0,0:05:49.39,0:05:52.51,Karaoke,,0,0,0,,{\k9}of {\k56}severing {\k10}the {\k65}hereditary {\k52}pact {\k12}he {\k44}scrambled {\k13}up
+Dialogue: 0,0:05:52.51,0:05:55.52,Karaoke,,0,0,0,,{\k10}the {\k43}rolling {\k33}wooden {\k41}ladder {\k9}the {\k37}brass {\k39}wheels {\k67}screeching
+Dialogue: 0,0:05:55.52,0:05:59.02,Karaoke,,0,0,0,,{\k13}in {\k58}metallic {\k70}protest {\k10}the {\k42}shadow {\k45}lashed {\k31}out {\k8}a
+Dialogue: 0,0:05:59.02,0:06:02.14,Karaoke,,0,0,0,,{\k46}tendril {\k16}of {\k45}pure {\k58}freezing {\k56}cold {\k37}whipping {\k35}past {\k19}his
+Dialogue: 0,0:06:02.14,0:06:04.45,Karaoke,,0,0,0,,{\k35}ear {\k16}and {\k47}shattering {\k6}a {\k27}row {\k11}of {\k28}heavy {\k40}glass
+Dialogue: 0,0:06:04.49,0:06:08.16,Karaoke,,0,0,0,,{\k75}inkwells {\k38}corbin {\k38}grabbed {\k9}the {\k47}ledger {\k19}its {\k42}rusted {\k28}metal
+Dialogue: 0,0:06:08.16,0:06:11.75,Karaoke,,0,0,0,,{\k48}corners {\k54}biting {\k35}deep {\k29}into {\k14}his {\k57}palm {\k8}the {\k61}library
+Dialogue: 0,0:06:11.75,0:06:15.33,Karaoke,,0,0,0,,{\k72}violently {\k59}shuddered {\k10}the {\k59}floorboards {\k33}beneath {\k11}the {\k30}ladder {\k55}buckled
+Dialogue: 0,0:06:15.58,0:06:18.49,Karaoke,,0,0,0,,{\k57}splintering {\k40}upward {\k13}with {\k10}the {\k46}sound {\k12}of {\k61}snapping {\k52}bone
+Dialogue: 0,0:06:19.01,0:06:21.57,Karaoke,,0,0,0,,{\k34}corbin {\k23}threw {\k16}his {\k29}weight {\k51}backward {\k48}crashing {\k26}onto {\k7}a
+Dialogue: 0,0:06:21.57,0:06:24.26,Karaoke,,0,0,0,,{\k33}heavy {\k20}oak {\k37}reading {\k42}table {\k12}as {\k11}the {\k26}ladder {\k66}collapsed
+Dialogue: 0,0:06:24.26,0:06:26.90,Karaoke,,0,0,0,,{\k18}into {\k11}the {\k64}yawning {\k34}dark {\k55}fissure {\k10}that {\k15}had {\k33}just
+Dialogue: 0,0:06:26.90,0:06:28.41,Karaoke,,0,0,0,,{\k34}torn {\k36}open {\k10}in {\k9}the {\k62}floor
