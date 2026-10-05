@@ -230,7 +230,10 @@ python -m pip install --upgrade \
     huggingface_hub \
     hf_xet \
     praatio \
-    pedalboard
+    pedalboard \
+    causal_conv1d \
+    fla
+    
 
 python -m pip install -U \
     "flash-linear-attention[cuda]"
