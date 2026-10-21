@@ -197,7 +197,7 @@ Exemplar Output
   {
     "discrete_sfx_id": "discrete_sfx000",
     "anchor": "Corbin barely heard the chimes",
-    "caption": "grandfather clock chiming",
+    "caption": "clock striking",
     "duration": "brief",
     "transmission_profile": null
   },
@@ -225,21 +225,21 @@ Exemplar Output
   {
     "discrete_sfx_id": "discrete_sfx004",
     "anchor": "Pushing open the massive oak front doors",
-    "caption": "massive oak doors slowly creaking open",
+    "caption": "giant wooden doors slowly creaking open",
     "duration": "prolonged",
     "transmission_profile": null
   },
   {
     "discrete_sfx_id": "discrete_sfx005",
     "anchor": "The titanic doors boomed shut behind him",
-    "caption": "massive wooden doors booming shut",
+    "caption": "giant doors slamming shut",
     "duration": "impulse",
     "transmission_profile": null
   },
   {
     "discrete_sfx_id": "discrete_sfx006",
     "anchor": "he headed toward the grand staircase and began climbing the steps",
-    "caption": "footsteps ascending a staircase",
+    "caption": "slow footsteps climbing a staircase",
     "duration": "prolonged",
     "transmission_profile": null
   },
@@ -281,7 +281,7 @@ Exemplar Output
   {
     "discrete_sfx_id": "discrete_sfx012",
     "anchor": "shattering a row of heavy glass inkwells",
-    "caption": "inkwells shattering",
+    "caption": "heavy glass shattering",
     "duration": "impulse",
     "transmission_profile": null
   },
@@ -302,14 +302,14 @@ Exemplar Output
   {
     "discrete_sfx_id": "discrete_sfx015",
     "anchor": "crashing onto a heavy oak reading table",
-    "caption": "body crashing onto wooden table",
+    "caption": "wooden table crash",
     "duration": "impulse",
     "transmission_profile": null
   },
   {
     "discrete_sfx_id": "discrete_sfx016",
     "anchor": "the ladder collapsed into the yawning, dark fissure",
-    "caption": "loud floor collapsing",
+    "caption": "loud floor splitting and collapsing",
     "duration": "brief",
     "transmission_profile": null
   }
