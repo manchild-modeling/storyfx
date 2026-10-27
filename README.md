@@ -4,7 +4,7 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/manchild-modeling/storyfx.git
-cd storyfx
+cd workspace/storyfx
 ```
 
 Set up the required Python environments and dependencies using:
